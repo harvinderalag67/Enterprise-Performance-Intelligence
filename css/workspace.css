@@ -1,0 +1,45 @@
+
+/* Enterprise Performance Intelligence™ - workspace.css v1.0.0 */
+
+:root{
+--primary:#0f4c81;--primary-dark:#0a365b;--success:#0e9f6e;
+--warning:#f59e0b;--danger:#dc2626;--bg:#f3f6fb;--surface:#fff;
+--border:#d9e2ec;--text:#1f2937;--muted:#6b7280;
+--radius:12px;--radius-sm:8px;
+--shadow:0 8px 24px rgba(15,76,129,.08);
+--font:"Inter","Segoe UI",Arial,sans-serif;
+}
+*,*:before,*:after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6}
+img{display:block;max-width:100%}
+button{font:inherit;cursor:pointer}
+#workspace-shell{min-height:100vh;display:flex;flex-direction:column}
+#workspace-main{flex:1;max-width:1440px;margin:auto;padding:32px;width:100%}
+#workspace-header{display:flex;justify-content:space-between;align-items:center;background:var(--surface);padding:18px 32px;border-bottom:1px solid var(--border);box-shadow:var(--shadow)}
+.header-left,.header-right,.executive-profile{display:flex;align-items:center}
+.header-left{gap:18px}.header-right{gap:24px}
+.brand-logo img{width:56px}.brand-information h1{font-size:2rem;color:var(--primary)}.brand-information p{color:var(--muted)}
+.executive-avatar{width:52px;height:52px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.executive-details{margin-left:12px}.executive-details p{color:var(--muted)}
+.secure-session{color:var(--success);font-size:.85rem;font-weight:600}
+#logout-button,.primary-button{padding:12px 22px;border-radius:10px;border:none;transition:.25s}
+#logout-button{background:#fff;border:1px solid var(--border)}
+.primary-button{background:var(--primary);color:#fff}
+.workspace-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);margin-bottom:28px}
+.section-heading{margin-bottom:24px}
+.section-label{display:inline-block;background:#e8f1ff;color:#1d4ed8;padding:8px 18px;border-radius:999px;font-weight:700;margin-bottom:14px}
+.section-heading h2{font-size:2.1rem;color:#0f2147}
+#workspace-grid{display:grid;grid-template-columns:repeat(2,minmax(320px,1fr));gap:28px;margin-top:28px}
+#platform-status{grid-column:1/-1}
+.session-grid,.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.session-item,.summary-item{padding:14px;border:1px solid var(--border);border-radius:var(--radius-sm);background:#fbfcfe}
+.session-item label,.summary-item label{display:block;color:var(--muted);font-size:.82rem;margin-bottom:6px}
+.status-ready{color:var(--success);font-weight:700}.status-warning{color:var(--warning);font-weight:700}.status-error{color:var(--danger);font-weight:700}
+.analysis-placeholder,.history-placeholder,.activity-placeholder{min-height:220px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.analysis-icon,.history-icon,.activity-icon{font-size:48px;margin-bottom:18px}
+.status-list{display:flex;flex-direction:column;gap:12px}
+.status-row{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border:1px solid var(--border);border-radius:10px;background:#fafcff}
+#workspace-actions{text-align:center}.action-buttons{margin-top:24px}
+#workspace-footer{display:flex;justify-content:space-between;align-items:center;padding:20px 32px;background:var(--surface);border-top:1px solid var(--border);margin-top:24px}
+@media(max-width:992px){#workspace-grid{grid-template-columns:1fr}#platform-status{grid-column:auto}#workspace-header{flex-direction:column;align-items:flex-start;gap:18px}}
+@media(max-width:768px){#workspace-main{padding:18px}.section-heading h2{font-size:1.7rem}.brand-information h1{font-size:1.5rem}#workspace-footer{flex-direction:column;gap:12px;text-align:center}}

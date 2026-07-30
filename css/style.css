@@ -1,0 +1,1629 @@
+/* Base Resets & Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+    padding-bottom: 3rem;
+}
+
+/* Header Navbar Styling */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 1.25rem 2rem;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.category-badge {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.35rem 0.85rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+/* Hero Banner Styling */
+.hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    padding: 4.5rem 2rem;
+    text-align: center;
+}
+
+.hero-container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    font-weight: 300;
+}
+
+/* Main Split View Layout */
+.main-container {
+    max-width: 1200px;
+    margin: 3rem auto 0 auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+
+@media (max-width: 900px) {
+    .main-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* Left Column Context Styling */
+.content-left h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+}
+
+.content-left p {
+    color: #475569;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 2.5rem 0;
+}
+
+.instruction-text {
+    font-size: 0.95rem !important;
+    color: #64748b !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Interactive Accordion Blueprint System */
+.blueprint-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.blueprint-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: all 0.2s ease;
+}
+
+.blueprint-card[open] {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
+}
+
+.blueprint-card summary {
+    font-weight: 600;
+    color: #1e293b;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: none;
+    list-style: none;
+}
+
+.blueprint-card summary::-webkit-details-marker {
+    display: none;
+}
+
+.blueprint-content {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed #e2e8f0;
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+/* Operational Badges */
+.badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.badge.active {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.badge.pipeline {
+    background-color: #f1f5f9;
+    color: #64748b;
+}
+
+/* Right Column Workspace Widgets */
+.vault-card {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.03);
+    margin-bottom: 1.5rem;
+}
+
+.vault-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.vault-card p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+}
+
+.inner-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e2e8f0;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 0.4rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: #0f172a;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #0f172a;
+}
+
+/* CTA Action Button */
+.cta-button {
+    width: 100%;
+    background-color: #0f172a;
+    color: #ffffff;
+    border: none;
+    padding: 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 0.5rem;
+}
+
+.cta-button:hover {
+    background-color: #1e293b;
+}
+
+/* Security Information Block */
+.privacy-card {
+    background-color: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 8px;
+    padding: 1.25rem;
+}
+
+.privacy-card h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.50rem;
+}
+
+.privacy-card ul {
+    list-style-type: none;
+}
+
+.privacy-card li {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.privacy-card li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #94a3b8;
+}
+
+/* Footer Element */
+footer {
+    text-align: center;
+    margin-top: 5rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+footer p {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+/*==============================================================
+SECTION 1
+EXECUTIVE HEADER
+==============================================================*/
+
+:root{
+
+--epi-navy:#081B3A;
+--epi-blue:#1D4ED8;
+--epi-teal:#14B8A6;
+--epi-gold:#D4A017;
+--epi-bg:#F8FAFC;
+--epi-card:#FFFFFF;
+--epi-text:#0F172A;
+--epi-secondary:#475569;
+--epi-border:#E2E8F0;
+
+}
+
+body{
+
+font-family:"Inter",sans-serif;
+
+background:var(--epi-bg);
+
+color:var(--epi-text);
+
+}
+
+.epi-container{
+
+max-width:1280px;
+
+margin:auto;
+
+padding:0 40px;
+
+}
+
+.epi-header{
+
+background:var(--epi-navy);
+
+padding:28px 0;
+
+color:white;
+
+}
+
+.epi-header .epi-container{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.brand-section{
+
+display:flex;
+
+align-items:center;
+
+gap:24px;
+
+}
+
+.brand-logo img{
+
+width:72px;
+
+}
+
+.brand-copy h1{
+
+font-family:"Manrope",sans-serif;
+
+font-size:38px;
+
+font-weight:800;
+
+margin:0;
+
+}
+
+.brand-tagline{
+
+margin-top:8px;
+
+font-size:20px;
+
+color:#D7E6FF;
+
+}
+
+.brand-company{
+
+margin-top:6px;
+
+font-size:18px;
+
+color:var(--epi-gold);
+
+}
+
+.header-badges{
+
+display:flex;
+
+flex-direction:column;
+
+gap:16px;
+
+}
+
+.badge{
+
+border:1px solid rgba(255,255,255,.2);
+
+padding:14px 22px;
+
+border-radius:12px;
+
+font-weight:600;
+
+}
+
+/*==============================================================
+SECTION 2
+HERO
+==============================================================*/
+
+.hero-section{
+
+padding:90px 0;
+
+}
+
+.hero-grid{
+
+display:grid;
+
+grid-template-columns:1.05fr .95fr;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+.hero-label{
+
+display:inline-block;
+
+background:#E8F4FF;
+
+color:var(--epi-blue);
+
+padding:10px 18px;
+
+border-radius:999px;
+
+font-weight:700;
+
+margin-bottom:24px;
+
+}
+
+.hero-content h2{
+
+font-family:"Manrope",sans-serif;
+
+font-size:72px;
+
+line-height:1.08;
+
+margin-bottom:30px;
+
+}
+
+.hero-content h2 span{
+
+color:var(--epi-blue);
+
+}
+
+.hero-description{
+
+text-align:justify;
+
+text-justify:inter-word;
+
+font-size:22px;
+
+line-height:1.9;
+
+color:var(--epi-secondary);
+
+margin-bottom:40px;
+
+}
+
+.hero-actions{
+
+display:flex;
+
+gap:20px;
+
+}
+
+.primary-button{
+
+background:var(--epi-blue);
+
+color:white;
+
+border:none;
+
+padding:18px 34px;
+
+border-radius:12px;
+
+font-size:18px;
+
+font-weight:700;
+
+cursor:pointer;
+
+}
+
+.secondary-button{
+
+background:white;
+
+border:2px solid var(--epi-blue);
+
+color:var(--epi-blue);
+
+padding:18px 34px;
+
+border-radius:12px;
+
+font-size:18px;
+
+font-weight:700;
+
+cursor:pointer;
+
+}
+
+.preview-card{
+
+background:white;
+
+border-radius:16px;
+
+padding:36px;
+
+box-shadow:0 12px 30px rgba(15,23,42,.08);
+
+border:1px solid var(--epi-border);
+
+}
+
+.preview-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:20px;
+
+margin:30px 0;
+
+}
+
+.metric-card{
+
+background:#F8FAFC;
+
+padding:20px;
+
+border-radius:12px;
+
+}
+
+.metric-card strong{
+
+display:block;
+
+font-size:34px;
+
+margin-top:8px;
+
+color:var(--epi-blue);
+
+}
+/*==============================================================
+SECTION 3A
+EXECUTIVE DIAGNOSTIC BLUEPRINTS™
+==============================================================*/
+
+.blueprint-section{
+
+padding:90px 0;
+
+background:#ffffff;
+
+}
+
+.section-heading{
+
+max-width:900px;
+
+margin:0 auto 60px;
+
+text-align:center;
+
+}
+
+.section-label{
+
+display:inline-block;
+
+padding:10px 18px;
+
+background:#E8F4FF;
+
+color:var(--epi-blue);
+
+border-radius:999px;
+
+font-weight:700;
+
+margin-bottom:20px;
+
+}
+
+.section-heading h2{
+
+font-family:"Manrope",sans-serif;
+
+font-size:48px;
+
+margin-bottom:24px;
+
+color:var(--epi-navy);
+
+}
+
+.section-heading p{
+
+font-size:20px;
+
+line-height:1.8;
+
+color:var(--epi-secondary);
+
+max-width:760px;
+
+margin:auto;
+
+text-align:justify;
+
+}
+
+.blueprint-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:24px;
+
+margin-top:60px;
+
+align-items:stretch;
+
+}
+@media (max-width:1400px){
+
+.blueprint-grid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+@media (max-width:900px){
+
+.blueprint-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media (max-width:600px){
+
+.blueprint-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+.blueprint-card{
+
+background:white;
+
+border:1px solid var(--epi-border);
+
+border-radius:16px;
+
+padding:28px;
+
+cursor:pointer;
+
+transition:all .25s ease;
+
+box-shadow:0 8px 24px rgba(15,23,42,.05);
+
+min-height:280px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:space-between;
+
+}
+
+.blueprint-card:hover{
+
+transform:translateY(-8px);
+
+border-color:var(--epi-blue);
+
+box-shadow:0 18px 40px rgba(29,78,216,.15);
+
+}
+
+.blueprint-card.selected{
+
+border:2px solid var(--epi-blue);
+
+background:#F6FAFF;
+
+}
+
+.blueprint-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:24px;
+
+}
+
+.blueprint-id{
+
+font-weight:800;
+
+font-size:14px;
+
+color:var(--epi-blue);
+
+letter-spacing:.08em;
+
+}
+
+.blueprint-status{
+
+background:#DCFCE7;
+
+color:#166534;
+
+padding:6px 12px;
+
+border-radius:999px;
+
+font-size:12px;
+
+font-weight:700;
+
+}
+
+.blueprint-card h3{
+
+font-family:"Manrope",sans-serif;
+
+font-size:26px;
+
+line-height:1.3;
+
+margin-bottom:18px;
+
+color:var(--epi-navy);
+
+}
+
+.blueprint-card p{
+
+font-size:17px;
+
+line-height:1.7;
+
+color:var(--epi-secondary);
+
+text-align:justify;
+
+flex-grow:1;
+
+}
+
+.blueprint-meta{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-top:30px;
+
+padding-top:20px;
+
+border-top:1px solid var(--epi-border);
+
+font-size:14px;
+
+font-weight:600;
+
+color:var(--epi-blue);
+
+}
+/*==============================================================
+SECTION 3B
+BLUEPRINT ENGINE LABEL
+==============================================================*/
+
+.blueprint-engine{
+
+margin-top:22px;
+
+padding:14px 18px;
+
+background:#EEF6FF;
+
+border-left:4px solid var(--epi-blue);
+
+border-radius:10px;
+
+font-size:15px;
+
+font-weight:700;
+
+color:var(--epi-blue);
+
+line-height:1.5;
+
+}
+/*==============================================================
+SECTION 4A
+EXECUTIVE TRUST GATEWAY™
+==============================================================*/
+
+.trust-section{
+
+padding:100px 0;
+
+background:#F8FAFC;
+
+}
+
+.trust-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:30px;
+
+margin-top:60px;
+
+}
+
+.trust-card{
+
+background:white;
+
+border-radius:16px;
+
+padding:32px;
+
+border:1px solid var(--epi-border);
+
+box-shadow:0 10px 25px rgba(15,23,42,.06);
+
+transition:.25s;
+
+}
+
+.trust-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 20px 40px rgba(29,78,216,.12);
+
+}
+
+.trust-icon{
+
+width:72px;
+
+height:72px;
+
+border-radius:50%;
+
+background:#EEF6FF;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:32px;
+
+margin-bottom:24px;
+
+}
+
+.trust-card h3{
+
+font-family:"Manrope",sans-serif;
+
+font-size:26px;
+
+margin-bottom:18px;
+
+color:var(--epi-navy);
+
+}
+
+.trust-card p{
+
+font-size:17px;
+
+line-height:1.8;
+
+text-align:justify;
+
+color:var(--epi-secondary);
+
+}
+
+.trust-flow{
+
+margin-top:80px;
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+align-items:center;
+
+gap:18px;
+
+}
+
+.flow-step{
+
+background:white;
+
+padding:18px 24px;
+
+border-radius:14px;
+
+border:1px solid var(--epi-border);
+
+font-weight:700;
+
+text-align:center;
+
+box-shadow:0 8px 20px rgba(15,23,42,.05);
+
+min-width:170px;
+
+}
+
+.flow-arrow{
+
+font-size:28px;
+
+color:var(--epi-blue);
+
+font-weight:700;
+
+}
+/*==============================================================
+SECTION 4B
+EXECUTIVE CONFIDENTIALITY AGREEMENT™
+==============================================================*/
+
+.agreement-section{
+
+padding:90px 0;
+
+background:#ffffff;
+
+}
+
+.agreement-panel{
+
+background:white;
+
+border:1px solid var(--epi-border);
+
+border-radius:18px;
+
+padding:50px;
+
+box-shadow:0 12px 30px rgba(15,23,42,.08);
+
+}
+
+.agreement-summary{
+
+margin-top:40px;
+
+padding:28px;
+
+background:#F8FAFC;
+
+border-radius:14px;
+
+}
+
+.agreement-summary h3{
+
+margin-bottom:20px;
+
+font-family:"Manrope",sans-serif;
+
+}
+
+.agreement-summary ul{
+
+margin:0;
+
+padding-left:22px;
+
+line-height:2;
+
+}
+
+.acknowledgement-panel{
+
+margin-top:45px;
+
+}
+
+.acknowledgement-panel h3{
+
+margin-bottom:24px;
+
+font-family:"Manrope",sans-serif;
+
+}
+
+.agreement-item{
+
+display:flex;
+
+align-items:flex-start;
+
+gap:16px;
+
+margin-bottom:22px;
+
+cursor:pointer;
+
+font-size:17px;
+
+line-height:1.8;
+
+}
+
+.agreement-item input{
+
+margin-top:6px;
+
+transform:scale(1.2);
+
+}
+
+.agreement-actions{
+
+margin-top:45px;
+
+display:flex;
+
+justify-content:flex-end;
+
+}
+
+#continue-upload{
+
+min-width:320px;
+
+}
+
+#continue-upload:disabled{
+
+opacity:.45;
+
+cursor:not-allowed;
+
+}
+/*==============================================================
+SECTION 5A
+FINANCIAL INTELLIGENCE WORKSPACE™
+==============================================================*/
+
+.workspace-section{
+
+padding:110px 0;
+
+background:#F8FAFC;
+
+}
+
+.workspace-overview{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:32px;
+
+margin-top:60px;
+
+}
+
+.workspace-card{
+
+background:white;
+
+padding:34px;
+
+border-radius:18px;
+
+border:1px solid var(--epi-border);
+
+box-shadow:0 12px 28px rgba(15,23,42,.06);
+
+transition:.25s;
+
+}
+
+.workspace-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 20px 42px rgba(29,78,216,.10);
+
+}
+
+.workspace-icon{
+
+width:76px;
+
+height:76px;
+
+border-radius:50%;
+
+background:#EEF6FF;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:34px;
+
+margin-bottom:24px;
+
+}
+
+.workspace-card h3{
+
+font-family:"Manrope",sans-serif;
+
+font-size:24px;
+
+margin-bottom:20px;
+
+color:var(--epi-navy);
+
+}
+
+.workspace-card ul{
+
+padding-left:22px;
+
+line-height:2;
+
+color:var(--epi-secondary);
+
+font-size:17px;
+
+}
+
+.workspace-card li{
+
+margin-bottom:8px;
+
+}
+/*==============================================================
+SECTION 5B
+SECURE UPLOAD WORKSPACE™
+==============================================================*/
+
+.upload-workspace-section{
+
+padding:80px 0 120px;
+
+background:white;
+
+}
+
+.upload-workspace{
+
+background:white;
+
+border-radius:18px;
+
+border:1px solid var(--epi-border);
+
+padding:48px;
+
+box-shadow:0 14px 36px rgba(15,23,42,.08);
+
+}
+
+.upload-header{
+
+text-align:center;
+
+margin-bottom:40px;
+
+}
+
+.upload-header h2{
+
+font-family:"Manrope",sans-serif;
+
+font-size:42px;
+
+margin-bottom:18px;
+
+}
+
+.upload-header p{
+
+max-width:760px;
+
+margin:auto;
+
+font-size:19px;
+
+line-height:1.8;
+
+color:var(--epi-secondary);
+
+text-align:justify;
+
+}
+
+.upload-drop-zone{
+
+border:3px dashed var(--epi-blue);
+
+border-radius:18px;
+
+padding:70px 40px;
+
+text-align:center;
+
+background:#F8FBFF;
+
+transition:.25s;
+
+cursor:pointer;
+
+}
+
+.upload-drop-zone.dragover{
+
+background:#EAF4FF;
+
+border-color:var(--epi-teal);
+
+}
+
+.upload-icon{
+
+font-size:72px;
+
+margin-bottom:20px;
+
+}
+
+.supported-files{
+
+margin-top:24px;
+
+font-weight:700;
+
+color:var(--epi-blue);
+
+}
+
+.upload-queue{
+
+margin-top:40px;
+
+background:#F8FAFC;
+
+border-radius:14px;
+
+padding:28px;
+
+border:1px solid var(--epi-border);
+
+min-height:100px;
+
+}
+
+.queue-placeholder{
+
+text-align:center;
+
+color:var(--epi-secondary);
+
+font-style:italic;
+
+}
+/*==============================================================
+SECTION 5C
+ENTERPRISE DOCUMENT QUEUE™
+==============================================================*/
+
+.queue-container{
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+margin-top:20px;
+
+}
+
+.document-card{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:22px 26px;
+
+background:white;
+
+border-radius:14px;
+
+border:1px solid var(--epi-border);
+
+box-shadow:0 8px 20px rgba(15,23,42,.05);
+
+}
+
+.document-info{
+
+display:flex;
+
+flex-direction:column;
+
+gap:6px;
+
+}
+
+.document-name{
+
+font-weight:700;
+
+font-size:18px;
+
+color:var(--epi-navy);
+
+}
+
+.document-meta{
+
+font-size:14px;
+
+color:var(--epi-secondary);
+
+}
+
+.document-status{
+
+padding:8px 14px;
+
+border-radius:999px;
+
+background:#DCFCE7;
+
+color:#166534;
+
+font-size:13px;
+
+font-weight:700;
+
+}
+
+.workspace-actions{
+
+margin-top:40px;
+
+display:flex;
+
+justify-content:flex-end;
+
+}
+
+#begin-analysis-button{
+
+min-width:300px;
+
+}
+
+#begin-analysis-button:disabled{
+
+opacity:.45;
+
+cursor:not-allowed;
+
+}
+/*==============================================================
+SECTION 5C
+ENTERPRISE PROCESSING CONSOLE™
+==============================================================*/
+
+.processing-console{
+
+margin-top:50px;
+
+background:#ffffff;
+
+border:1px solid var(--epi-border);
+
+border-radius:18px;
+
+padding:40px;
+
+box-shadow:0 10px 28px rgba(15,23,42,.06);
+
+}
+
+.processing-header{
+
+margin-bottom:30px;
+
+text-align:center;
+
+}
+
+.processing-header h3{
+
+font-family:"Manrope",sans-serif;
+
+font-size:28px;
+
+margin-bottom:10px;
+
+color:var(--epi-navy);
+
+}
+
+.processing-header p{
+
+font-size:17px;
+
+color:var(--epi-secondary);
+
+max-width:760px;
+
+margin:auto;
+
+line-height:1.7;
+
+}
+
+.processing-pipeline{
+
+display:flex;
+
+flex-direction:column;
+
+gap:14px;
+
+margin:30px 0;
+
+}
+
+.pipeline-step{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+padding:18px 22px;
+
+border-radius:12px;
+
+border:1px solid var(--epi-border);
+
+background:#F8FAFC;
+
+transition:all .25s ease;
+
+}
+
+.pipeline-icon{
+
+font-size:22px;
+
+font-weight:700;
+
+min-width:28px;
+
+text-align:center;
+
+}
+
+.pipeline-text{
+
+font-weight:600;
+
+color:var(--epi-navy);
+
+}
+
+.pipeline-step.pending{
+
+opacity:.65;
+
+}
+
+.pipeline-step.active{
+
+border-color:var(--epi-blue);
+
+background:#EEF6FF;
+
+}
+
+.pipeline-step.completed{
+
+background:#ECFDF5;
+
+border-color:#16A34A;
+
+}
+
+.pipeline-step.completed .pipeline-icon{
+
+color:#16A34A;
+
+font-weight:700;
+
+}
+/* =========================================================
+   EPI — CANONICAL BLUEPRINT SELECTION STATE
+   ========================================================= */
+
+.blueprint-card {
+    cursor: pointer;
+}
+
+.blueprint-card.selected {
+    transform: translateY(-2px);
+}
+
+.blueprint-card.selected::after {
+    content: "Selected";
+    display: block;
+    margin-top: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}

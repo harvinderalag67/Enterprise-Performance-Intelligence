@@ -1,0 +1,1231 @@
+{
+  "contract": {
+    "name": "EPI_CANONICAL_BLUEPRINT_REGISTRY",
+    "version": "2.0.0",
+    "blueprintCount": 12,
+    "status": "FROZEN_MVP",
+    "semanticAuthority": true,
+    "scopeBoundary": {
+      "customerVisibleBlueprintChoices": 12,
+      "naturalLanguageQuestionRouterRequired": false,
+      "dynamicQuestionGenerationRequired": false,
+      "additionalBlueprintsAllowedForMVP": false
+    },
+    "universalReasoningProtocol": [
+      {
+        "level": 1,
+        "name": "OBSERVATION",
+        "question": "What happened?"
+      },
+      {
+        "level": 2,
+        "name": "DIAGNOSIS",
+        "question": "Why did it happen?"
+      },
+      {
+        "level": 3,
+        "name": "QUANTIFICATION",
+        "question": "How much value is at stake?"
+      },
+      {
+        "level": 4,
+        "name": "PRIORITIZATION",
+        "question": "Which problem should be solved first?"
+      },
+      {
+        "level": 5,
+        "name": "RECOMMENDATION",
+        "question": "Who should do what, by when, with what expected ROI or enterprise-value outcome?"
+      }
+    ],
+    "epistemicStates": [
+      "FACT",
+      "INFERENCE",
+      "HYPOTHESIS",
+      "UNKNOWN"
+    ],
+    "materialConclusionRequirements": [
+      "EVIDENCE",
+      "PROVENANCE",
+      "CONFIDENCE"
+    ]
+  },
+  "blueprints": [
+    {
+      "id": "PB-001",
+      "canonicalQuestion": "Why Is EBITDA Declining?",
+      "name": "EBITDA Performance Intelligence",
+      "category": "PROFITABILITY",
+      "description": "Identifies, quantifies, and prioritizes the principal drivers of EBITDA deterioration and distinguishes structural causes from temporary performance movements.",
+      "version": "2.0.0",
+      "status": "ACTIVE",
+      "objectives": [
+        "Determine the principal causes of EBITDA deterioration.",
+        "Quantify the financial impact of material EBITDA drivers where evidence permits.",
+        "Separate revenue, margin, mix, cost, operating leverage, and efficiency effects.",
+        "Distinguish observed facts from inferred root causes.",
+        "Identify controllable EBITDA recovery opportunities."
+      ],
+      "requiredEvidence": [
+        "Income Statement",
+        "Balance Sheet",
+        "Comparative financial periods"
+      ],
+      "recommendedEvidence": [
+        "Trial Balance",
+        "Monthly or quarterly P&L",
+        "Revenue breakdown",
+        "COGS breakdown",
+        "Operating expense ledger"
+      ],
+      "optionalEvidence": [
+        "Product profitability data",
+        "Customer profitability data",
+        "Cost centre reports",
+        "Capacity utilization data",
+        "Procurement data",
+        "Headcount and payroll data"
+      ],
+      "diagnosticQuestions": [
+        "Is EBITDA deterioration driven primarily by revenue, gross margin, operating expenses, or a combination?",
+        "Has gross margin deteriorated, and what explains the movement?",
+        "Are price, volume, product mix, customer mix, channel mix, or geographic mix contributing?",
+        "Are input costs increasing faster than revenue or pricing recovery?",
+        "Are fixed costs growing faster than the enterprise's operating scale?",
+        "Is underutilized capacity causing poor overhead absorption?",
+        "Are exceptional or non-recurring items distorting underlying EBITDA?",
+        "Which drivers are structural, temporary, controllable, or externally driven?"
+      ],
+      "diagnosticLenses": [
+        "Revenue bridge",
+        "Gross margin bridge",
+        "Price-volume-mix",
+        "COGS variance",
+        "Operating expense variance",
+        "Operating leverage",
+        "Cost creep",
+        "Capacity utilization and overhead absorption",
+        "Product mix",
+        "Customer and channel mix",
+        "Geographic variance",
+        "Recurring versus non-recurring effects"
+      ],
+      "confidenceRules": [
+        "Do not state a root cause as fact unless supported by evidence.",
+        "Separate observed financial movements from inferred causal explanations.",
+        "Quantify impact only where the underlying evidence supports calculation.",
+        "Preserve UNKNOWN when evidence is insufficient.",
+        "Material conclusions must retain confidence and provenance."
+      ],
+      "reasoningContext": {
+        "primaryObjective": "Explain why EBITDA is declining and identify the highest-value evidence-supported recovery levers.",
+        "reasoningSequence": [
+          "Establish the magnitude and timing of EBITDA deterioration.",
+          "Decompose the EBITDA movement into major financial drivers.",
+          "Generate plausible causal hypotheses.",
+          "Test each hypothesis against available evidence.",
+          "Identify supporting and conflicting evidence.",
+          "Quantify financial impact where supportable.",
+          "Rank root causes by materiality, confidence, and controllability.",
+          "Identify management actions supported by the evidence."
+        ],
+        "constraints": [
+          "Do not invent missing operational explanations.",
+          "Do not equate correlation with causation.",
+          "Do not convert missing evidence into zero.",
+          "Explicitly identify evidence gaps that could materially change the conclusion."
+        ]
+      },
+      "outputContract": {
+        "requiredOutputs": [
+          "Direct answer to the executive question",
+          "Key findings",
+          "Root causes",
+          "Financial impact or value at stake where quantifiable",
+          "Confidence assessment",
+          "Supporting evidence and provenance",
+          "Material evidence gaps",
+          "Priority recovery opportunities",
+          "Recommended management actions"
+        ]
+      },
+      "metadata": {
+        "canonical": true,
+        "customerVisibleId": false,
+        "legacyLogicSources": [
+          "EBITDA Decay & Velocity Matrix",
+          "Operational Leverage & Cost Creep",
+          "Capacity Utilization & Overhead Absorption",
+          "Revenue Quality & Variance Audit"
+        ]
+      }
+    },
+    {
+      "id": "PB-002",
+      "canonicalQuestion": "Why Is Operating Profit Not Converting Into Cash?",
+      "name": "Profit-to-Cash Conversion Intelligence",
+      "category": "CASH_FLOW",
+      "description": "Explains why reported operating profitability is not translating into operating cash generation by tracing working-capital movements, non-cash effects, timing differences, and other cash conversion drivers.",
+      "version": "2.0.0",
+      "status": "ACTIVE",
+      "objectives": [
+        "Reconcile operating profit with operating cash flow.",
+        "Identify the principal causes of weak profit-to-cash conversion.",
+        "Quantify cash absorbed by working capital and other material drivers.",
+        "Distinguish timing effects from structural cash conversion problems."
+      ],
+      "requiredEvidence": [
+        "Income Statement",
+        "Balance Sheet",
+        "Cash Flow Statement",
+        "Comparative financial periods"
+      ],
+      "recommendedEvidence": [
+        "Trial Balance",
+        "Accounts receivable ageing",
+        "Inventory ageing",
+        "Accounts payable ageing",
+        "Monthly cash flow data"
+      ],
+      "optionalEvidence": [
+        "Customer payment terms",
+        "Supplier payment terms",
+        "Inventory movement reports",
+        "Capex schedules",
+        "Tax schedules",
+        "Provision schedules"
+      ],
+      "diagnosticQuestions": [
+        "How does operating profit reconcile to operating cash flow?",
+        "Is cash being absorbed by receivables, inventory, payables, or other working-capital accounts?",
+        "Are non-cash income or expense items creating a profit-to-cash divergence?",
+        "Are tax, provisions, advances, deposits, or timing effects material?",
+        "Is the conversion problem temporary or structurally recurring?"
+      ],
+      "diagnosticLenses": [
+        "Operating profit to operating cash reconciliation",
+        "Working-capital bridge",
+        "Receivables movement",
+        "Inventory movement",
+        "Payables movement",
+        "Non-cash adjustments",
+        "Tax and provision movements",
+        "Cash conversion trend"
+      ],
+      "confidenceRules": [
+        "Do not infer cash causes from profit movements alone.",
+        "Reconcile balance-sheet movements with cash-flow evidence where available.",
+        "Preserve timing uncertainty when transaction-level evidence is unavailable.",
+        "Quantify cash absorption only from supported balances or movements."
+      ],
+      "reasoningContext": {
+        "primaryObjective": "Explain the gap between operating profitability and cash generation.",
+        "reasoningSequence": [
+          "Establish operating profit and operating cash generation by period.",
+          "Build the profit-to-cash reconciliation.",
+          "Identify material working-capital and non-cash drivers.",
+          "Test whether the divergence is recurring or temporary.",
+          "Quantify the largest cash conversion constraints.",
+          "Prioritize corrective actions."
+        ],
+        "constraints": [
+          "Do not treat accounting profit as equivalent to cash.",
+          "Do not double-count working-capital effects.",
+          "Clearly distinguish stock balances from period cash movements."
+        ]
+      },
+      "outputContract": {
+        "requiredOutputs": [
+          "Direct answer to the executive question",
+          "Profit-to-cash bridge",
+          "Principal conversion constraints",
+          "Cash impact",
+          "Confidence assessment",
+          "Evidence gaps",
+          "Recommended corrective actions"
+        ]
+      },
+      "metadata": {
+        "canonical": true,
+        "customerVisibleId": false,
+        "legacyLogicSources": [
+          "Working Capital Cash Flow Accelerator"
+        ]
+      }
+    },
+    {
+      "id": "PB-003",
+      "canonicalQuestion": "Why Is Revenue Growth Slowing?",
+      "name": "Revenue Growth Intelligence",
+      "category": "GROWTH",
+      "description": "Explains revenue growth deterioration by separating price, volume, mix, customer, product, channel, geographic, retention, and market-related drivers.",
+      "version": "2.0.0",
+      "status": "ACTIVE",
+      "objectives": [
+        "Determine why revenue growth is slowing.",
+        "Separate price, volume, mix, customer, product, channel, and geographic effects.",
+        "Identify whether growth deterioration is concentrated or systemic.",
+        "Identify evidence-supported growth recovery opportunities."
+      ],
+      "requiredEvidence": [
+        "Revenue by comparative period",
+        "Income Statement",
+        "Sales data"
+      ],
+      "recommendedEvidence": [
+        "Product sales",
+        "Customer sales",
+        "Pricing",
+        "Volume",
+        "Channel sales",
+        "Geographic sales"
+      ],
+      "optionalEvidence": [
+        "Pipeline data",
+        "Customer retention",
+        "Market share",
+        "Tender data",
+        "Competitor pricing",
+        "Sales-force performance"
+      ],
+      "diagnosticQuestions": [
+        "Is growth slowing because of price, volume, mix, customer losses, product weakness, channel weakness, or geography?",
+        "Which segments account for the growth shortfall?",
+        "Are existing customers buying less or are new-customer additions slowing?",
+        "Are pricing actions masking volume weakness?",
+        "Is growth quality improving or deteriorating?"
+      ],
+      "diagnosticLenses": [
+        "Price-volume-mix",
+        "Product growth",
+        "Customer growth",
+        "Channel performance",
+        "Geographic variance",
+        "Customer retention",
+        "New versus existing business",
+        "Revenue quality",
+        "Growth concentration"
+      ],
+      "confidenceRules": [
+        "Do not attribute internal revenue changes to market causes without external evidence.",
+        "Separate nominal growth from volume growth where pricing data exists.",
+        "Distinguish observed growth drivers from inferred market explanations.",
+        "Preserve uncertainty where segmentation data is unavailable."
+      ],
+      "reasoningContext": {
+        "primaryObjective": "Explain the slowdown in revenue growth and identify the highest-confidence recovery levers.",
+        "reasoningSequence": [
+          "Establish the timing and magnitude of growth deceleration.",
+          "Decompose growth by price, volume, mix, product, customer, channel, and geography.",
+          "Identify concentrated versus systemic weakness.",
+          "Test plausible internal and external causes.",
+          "Prioritize recovery opportunities."
+        ],
+        "constraints": [
+          "Do not invent market-share explanations without evidence.",
+          "Do not confuse price-led nominal growth with underlying demand growth.",
+          "Identify data limitations explicitly."
+        ]
+      },
+      "outputContract": {
+        "requiredOutputs": [
+          "Revenue growth diagnosis",
+          "Growth bridge",
+          "Principal slowdown drivers",
+          "Confidence assessment",
+          "Growth opportunities",
+          "Recommended actions"
+        ]
+      },
+      "metadata": {
+        "canonical": true,
+        "customerVisibleId": false,
+        "legacyLogicSources": [
+          "Revenue Quality & Variance Audit",
+          "Product & Portfolio Mix Drift",
+          "Geographic & Regional Variance Audit"
+        ]
+      }
+    },
+    {
+      "id": "PB-004",
+      "canonicalQuestion": "Where Is Cash Getting Trapped?",
+      "name": "Cash Entrapment Intelligence",
+      "category": "WORKING_CAPITAL",
+      "description": "Locates cash trapped across working capital, operating balances, restricted balances, capital projects, and other uses of funds, and identifies practical release opportunities.",
+      "version": "2.0.0",
+      "status": "ACTIVE",
+      "objectives": [
+        "Locate material pools of trapped cash.",
+        "Quantify cash tied up by category.",
+        "Identify the operational or commercial causes.",
+        "Assess realistic cash release opportunities."
+      ],
+      "requiredEvidence": [
+        "Balance Sheet",
+        "Cash Flow Statement",
+        "Comparative financial periods"
+      ],
+      "recommendedEvidence": [
+        "Accounts receivable ageing",
+        "Inventory ageing",
+        "Accounts payable ageing",
+        "Trial Balance",
+        "Working-capital schedules"
+      ],
+      "optionalEvidence": [
+        "Customer-level receivables",
+        "SKU inventory",
+        "Supplier terms",
+        "Advances and deposits schedules",
+        "Restricted cash details",
+        "Capex and construction-in-progress schedules",
+        "Intercompany balances"
+      ],
+      "diagnosticQuestions": [
+        "How much cash is tied up in receivables, inventory, payables dynamics, advances, deposits, restricted balances, or capital projects?",
+        "Which balances are growing faster than business activity?",
+        "Which trapped cash pools are overdue, slow-moving, obsolete, disputed, restricted, or operationally avoidable?",
+        "What can realistically be released and over what timeframe?"
+      ],
+      "diagnosticLenses": [
+        "Receivables",
+        "Inventory",
+        "Payables",
+        "Advances and deposits",
+        "Tax balances",
+        "Restricted cash",
+        "Capital work in progress",
+        "Intercompany balances",
+        "Cash conversion cycle",
+        "Working-capital trend"
+      ],
+      "confidenceRules": [
+        "Do not treat all working-capital balances as immediately releasable cash.",
+        "Distinguish gross trapped cash from realistically recoverable cash.",
+        "Identify restrictions, timing, and operational dependencies.",
+        "Preserve uncertainty where ageing or transaction detail is unavailable."
+      ],
+      "reasoningContext": {
+        "primaryObjective": "Identify where cash is trapped, why it is trapped, how much is potentially releasable, and what management should address first.",
+        "reasoningSequence": [
+          "Map material cash-consuming balance-sheet accounts.",
+          "Analyze trends and ageing where available.",
+          "Identify root causes of cash entrapment.",
+          "Estimate realistic release potential.",
+          "Rank actions by value, feasibility, and speed."
+        ],
+        "constraints": [
+          "Do not equate balance size with fully recoverable cash.",
+          "Do not recommend actions that create unsupported operational or supplier risk.",
+          "Separate short-term release from structural working-capital improvement."
+        ]
+      },
+      "outputContract": {
+        "requiredOutputs": [
+          "Cash entrapment map",
+          "Cash trapped by category",
+          "Root causes",
+          "Potentially releasable cash",
+          "Confidence assessment",
+          "Priority cash-release actions"
+        ]
+      },
+      "metadata": {
+        "canonical": true,
+        "customerVisibleId": false,
+        "legacyLogicSources": [
+          "Working Capital Cash Flow Accelerator"
+        ]
+      }
+    },
+    {
+      "id": "PB-005",
+      "canonicalQuestion": "Which Products or Portfolio Segments Are Destroying Value?",
+      "name": "Product & Portfolio Value Intelligence",
+      "category": "COMMERCIAL",
+      "description": "Identifies products, SKUs, brands, or portfolio segments that dilute profitability after considering revenue, direct cost, mix, discounts, cost-to-serve, and attributable operating burdens.",
+      "version": "2.0.0",
+      "status": "ACTIVE",
+      "objectives": [
+        "Identify loss-making or value-dilutive products.",
+        "Determine why individual products underperform.",
+        "Quantify portfolio profit leakage.",
+        "Identify pricing, cost, mix, rationalization, or growth actions."
+      ],
+      "requiredEvidence": [
+        "Income Statement",
+        "Product or SKU revenue data",
+        "Product or SKU cost data"
+      ],
+      "recommendedEvidence": [
+        "Product gross margin",
+        "Sales volumes",
+        "Pricing and discount data",
+        "Manufacturing or procurement cost",
+        "Inventory data"
+      ],
+      "optionalEvidence": [
+        "Cost-to-serve",
+        "Returns and rebates",
+        "Quality costs",
+        "Promotional spending",
+        "Channel costs",
+        "Capacity consumption"
+      ],
+      "diagnosticQuestions": [
+        "Which products generate negative or substandard contribution?",
+        "Is underperformance caused by price, cost, volume, mix, discounts, waste, or cost-to-serve?",
+        "Which products consume disproportionate working capital or capacity?",
+        "Which apparently profitable products become dilutive after attributable costs?"
+      ],
+      "diagnosticLenses": [
+        "Product contribution margin",
+        "Gross margin by SKU",
+        "Price-volume-mix",
+        "Direct cost",
+        "Cost-to-serve",
+        "Inventory intensity",
+        "Capacity consumption",
+        "Portfolio mix"
+      ],
+      "confidenceRules": [
+        "Do not assign shared overhead arbitrarily and present it as product causation.",
+        "Distinguish gross margin from true contribution economics.",
+        "State allocation assumptions explicitly.",
+        "Require product-level evidence for product-specific conclusions."
+      ],
+      "reasoningContext": {
+        "primaryObjective": "Identify products that destroy profitability and explain the economic mechanism.",
+        "reasoningSequence": [
+          "Rank products by revenue, margin, and contribution.",
+          "Identify negative and deteriorating outliers.",
+          "Analyze price, volume, mix, direct cost, and cost-to-serve drivers.",
+          "Assess strategic relevance and operational dependencies.",
+          "Prioritize corrective portfolio actions."
+        ],
+        "constraints": [
+          "Do not recommend discontinuation based solely on gross margin.",
+          "Consider cross-product and strategic dependencies where evidence exists.",
+          "Separate measured product economics from allocation-driven estimates."
+        ]
+      },
+      "outputContract": {
+        "requiredOutputs": [
+          "Product profitability ranking",
+          "Value-dilutive products",
+          "Root causes",
+          "Profit leakage",
+          "Confidence assessment",
+          "Recommended product actions"
+        ]
+      },
+      "metadata": {
+        "canonical": true,
+        "customerVisibleId": false,
+        "legacyLogicSources": [
+          "Product & Portfolio Mix Drift",
+          "Enterprise Profit Leak Taxonomy Router"
+        ]
+      }
+    },
+    {
+      "id": "PB-006",
+      "canonicalQuestion": "Which Customers Create or Destroy the Most Enterprise Value?",
+      "name": "Customer Enterprise Value Intelligence",
+      "category": "COMMERCIAL",
+      "description": "Determines which customers or customer segments create the greatest economic value after considering revenue quality, margin, cost-to-serve, working-capital burden, retention, and strategic contribution.",
+      "version": "2.0.0",
+      "status": "ACTIVE",
+      "objectives": [
+        "Identify highest- and lowest-value customers.",
+        "Measure customer economics beyond revenue alone.",
+        "Identify value-dilutive customer relationships.",
+        "Support pricing, service, credit, retention, and growth decisions."
+      ],
+      "requiredEvidence": [
+        "Customer-level revenue",
+        "Customer-level gross margin or direct cost",
+        "Accounts receivable by customer"
+      ],
+      "recommendedEvidence": [
+        "Customer payment behavior",
+        "Discounts and rebates",
+        "Returns",
+        "Channel fees",
+        "Cost-to-serve"
+      ],
+      "optionalEvidence": [
+        "Customer tenure",
+        "Retention data",
+        "Service-level requirements",
+        "Delivery costs",
+        "Complaint data",
+        "Growth potential"
+      ],
+      "diagnosticQuestions": [
+        "Which customers create the highest economic contribution?",
+        "Which customers consume disproportionate working capital or service resources?",
+        "Which high-revenue customers produce weak or negative economic value?",
+        "Which customers combine strong profitability, cash quality, retention, and growth potential?"
+      ],
+      "diagnosticLenses": [
+        "Customer contribution",
+        "Gross margin",
+        "Cost-to-serve",
+        "Receivables burden",
+        "Payment behavior",
+        "Discount leakage",
+        "Returns",
+        "Channel economics",
+        "Retention and growth quality"
+      ],
+      "confidenceRules": [
+        "Do not equate revenue size with enterprise value contribution.",
+        "Customer-specific conclusions require customer-level evidence.",
+        "State cost allocation assumptions explicitly.",
+        "Separate current economic contribution from estimated strategic potential."
+      ],
+      "reasoningContext": {
+        "primaryObjective": "Identify customers that create or destroy economic value and explain why.",
+        "reasoningSequence": [
+          "Segment customers by revenue and contribution.",
+          "Incorporate cost-to-serve and working-capital burden.",
+          "Identify high-value and value-dilutive relationships.",
+          "Assess concentration and dependency risk.",
+          "Prioritize customer actions."
+        ],
+        "constraints": [
+          "Do not infer strategic value without evidence.",
+          "Do not recommend customer exit solely from revenue or gross margin.",
+          "Consider cash quality and cost-to-serve."
+        ]
+      },
+      "outputContract": {
+        "requiredOutputs": [
+          "Customer value ranking",
+          "Highest-value customers",
+          "Value-dilutive customers",
+          "Economic drivers",
+          "Confidence assessment",
+          "Recommended customer actions"
+        ]
+      },
+      "metadata": {
+        "canonical": true,
+        "customerVisibleId": false,
+        "legacyLogicSources": [
+          "Customer & Channel Profitability Matrix"
+        ]
+      }
+    },
+    {
+      "id": "PB-007",
+      "canonicalQuestion": "Where Are Operational Inefficiencies Reducing Profitability?",
+      "name": "Operational Efficiency Intelligence",
+      "category": "OPERATIONS",
+      "description": "Identifies operational inefficiencies, underutilized capacity, cost creep, waste, productivity gaps, and process constraints that reduce profitability.",
+      "version": "2.0.0",
+      "status": "ACTIVE",
+      "objectives": [
+        "Identify material operational inefficiencies.",
+        "Quantify their financial impact where possible.",
+        "Distinguish structural inefficiency from temporary disruption.",
+        "Prioritize operational improvement opportunities."
+      ],
+      "requiredEvidence": [
+        "Income Statement",
+        "Operating expense data",
+        "Comparative financial periods"
+      ],
+      "recommendedEvidence": [
+        "Cost centre reports",
+        "Production or throughput data",
+        "Capacity utilization",
+        "Headcount and payroll",
+        "Procurement and material usage"
+      ],
+      "optionalEvidence": [
+        "Downtime",
+        "Yield and scrap",
+        "Energy usage",
+        "Maintenance data",
+        "Quality deviations",
+        "Process cycle times"
+      ],
+      "diagnosticQuestions": [
+        "Where are costs or resource consumption disproportionate to output?",
+        "Is capacity underutilization causing fixed-cost under-absorption?",
+        "Are labor, materials, energy, maintenance, waste, or downtime deteriorating?",
+        "Which inefficiencies have the largest EBITDA impact?",
+        "Which causes are controllable?"
+      ],
+      "diagnosticLenses": [
+        "Capacity utilization",
+        "Overhead absorption",
+        "Labor productivity",
+        "Material yield",
+        "Waste and scrap",
+        "Energy intensity",
+        "Maintenance",
+        "Downtime",
+        "Procurement variance",
+        "Cost centre variance"
+      ],
+      "confidenceRules": [
+        "Do not infer operational causation solely from accounting variances.",
+        "Operational root causes require supporting operational evidence where available.",
+        "Separate measured inefficiency from unexplained cost variance.",
+        "Quantify only supportable savings."
+      ],
+      "reasoningContext": {
+        "primaryObjective": "Locate operational inefficiencies that materially reduce profitability and prioritize evidence-supported improvements.",
+        "reasoningSequence": [
+          "Identify material cost and productivity variances.",
+          "Link financial variance to operational drivers.",
+          "Assess capacity and resource utilization.",
+          "Quantify avoidable cost where supportable.",
+          "Rank improvement opportunities."
+        ],
+        "constraints": [
+          "Do not assume every cost increase represents inefficiency.",
+          "Account for volume and mix effects.",
+          "Distinguish theoretical savings from realizable savings."
+        ]
+      },
+      "outputContract": {
+        "requiredOutputs": [
+          "Operational inefficiency map",
+          "Root causes",
+          "Profitability impact",
+          "Confidence assessment",
+          "Priority efficiency opportunities",
+          "Recommended actions"
+        ]
+      },
+      "metadata": {
+        "canonical": true,
+        "customerVisibleId": false,
+        "legacyLogicSources": [
+          "Operational Leverage & Cost Creep",
+          "Capacity Utilization & Overhead Absorption"
+        ]
+      }
+    },
+    {
+      "id": "PB-008",
+      "canonicalQuestion": "Which Business Units, Markets, or Segments Are Creating or Destroying Value?",
+      "name": "Business Unit & Segment Value Intelligence",
+      "category": "ENTERPRISE_VALUE",
+      "description": "Determines where economic value is being created, diluted, or destroyed across business units, markets, geographies, subsidiaries, and operating segments.",
+      "version": "2.0.0",
+      "status": "ACTIVE",
+      "objectives": [
+        "Identify value-creating and value-destroying segments.",
+        "Compare profitability, cash generation, capital intensity, growth quality, and returns.",
+        "Identify cross-subsidization and structurally weak portfolio positions.",
+        "Prioritize evidence-supported portfolio actions."
+      ],
+      "requiredEvidence": [
+        "Income Statement",
+        "Balance Sheet",
+        "Comparative financial periods",
+        "Segment or business-unit performance"
+      ],
+      "recommendedEvidence": [
+        "Cash Flow Statement",
+        "Business-unit P&L",
+        "Segment balance sheets",
+        "Capital employed by segment",
+        "Geographic performance",
+        "Budgets and forecasts"
+      ],
+      "optionalEvidence": [
+        "Market data",
+        "Capacity utilization",
+        "Asset registers",
+        "Strategic plans",
+        "Investment project returns",
+        "Intercompany allocations"
+      ],
+      "diagnosticQuestions": [
+        "Which segments generate the strongest and weakest economic returns?",
+        "Which consume disproportionate capital relative to earnings and cash?",
+        "Where is growth failing to translate into adequate returns?",
+        "Are stronger businesses cross-subsidizing structurally weak operations?",
+        "Which underperforming segments are fixable, strategically necessary, restructuring candidates, or potential exits?"
+      ],
+      "diagnosticLenses": [
+        "Segment profitability",
+        "Cash generation",
+        "Capital employed",
+        "Return on invested capital",
+        "Growth quality",
+        "Asset utilization",
+        "Geographic variance",
+        "Cross-subsidization",
+        "Strategic fit",
+        "Portfolio concentration"
+      ],
+      "confidenceRules": [
+        "Do not state a root cause as fact unless supported by evidence.",
+        "Separate observed facts from inference and hypothesis.",
+        "Quantify impact only where evidence supports calculation.",
+        "Preserve UNKNOWN where evidence is insufficient.",
+        "Material conclusions must retain evidence, provenance, and confidence."
+      ],
+      "reasoningContext": {
+        "primaryObjective": "Identify where within the enterprise economic value is being created or destroyed and prioritize evidence-supported portfolio actions.",
+        "reasoningSequence": [
+          "Segment enterprise performance by available reporting dimension.",
+          "Compare profitability, cash, capital intensity, growth, and returns.",
+          "Identify persistent underperformance and cross-subsidization.",
+          "Test causes and strategic dependencies.",
+          "Quantify value impact where supportable.",
+          "Prioritize portfolio actions."
+        ],
+        "constraints": [
+          "Do not manufacture segment economics where allocation data is unavailable.",
+          "Do not recommend divestment solely from short-term underperformance.",
+          "Distinguish structural value destruction from temporary investment effects.",
+          "Identify material evidence gaps."
+        ]
+      },
+      "outputContract": {
+        "requiredOutputs": [
+          "Direct answer to the executive question",
+          "Business-unit or segment value map",
+          "Value-creating and value-destroying segments",
+          "Root causes",
+          "Value at stake where supportable",
+          "Confidence assessment",
+          "Material evidence gaps",
+          "Priority portfolio actions",
+          "Recommended management actions"
+        ]
+      },
+      "metadata": {
+        "canonical": true,
+        "customerVisibleId": false,
+        "legacyLogicSources": [
+          "Geographic & Regional Variance Audit",
+          "Enterprise Profit Leak Taxonomy Router",
+          "Structural Strategic Priority Integration"
+        ]
+      }
+    },
+    {
+      "id": "PB-009",
+      "canonicalQuestion": "Where Should Management Invest First?",
+      "name": "Capital Allocation Priority Intelligence",
+      "category": "CAPITAL_ALLOCATION",
+      "description": "Prioritizes competing investment and transformation opportunities based on strategic importance, value creation, capital requirement, risk, confidence, feasibility, and speed to impact.",
+      "version": "2.0.0",
+      "status": "ACTIVE",
+      "objectives": [
+        "Identify the highest-priority uses of management attention and capital.",
+        "Compare competing investment opportunities consistently.",
+        "Prioritize value creation relative to capital, risk, and execution complexity.",
+        "Distinguish urgent remediation from strategic investment."
+      ],
+      "requiredEvidence": [
+        "Income Statement",
+        "Balance Sheet",
+        "Cash Flow Statement",
+        "Available investment or initiative information"
+      ],
+      "recommendedEvidence": [
+        "Budgets",
+        "Forecasts",
+        "Capex proposals",
+        "Project economics",
+        "Strategic plans",
+        "Business-unit performance"
+      ],
+      "optionalEvidence": [
+        "NPV and IRR analyses",
+        "Scenario models",
+        "Capacity plans",
+        "Market data",
+        "Risk assessments",
+        "Implementation roadmaps"
+      ],
+      "diagnosticQuestions": [
+        "Which opportunities offer the greatest value relative to capital required?",
+        "Which investments address the largest current value leakage?",
+        "Which opportunities have the fastest credible time to value?",
+        "What are the execution and downside risks?",
+        "Which investments are prerequisites for other value-creation initiatives?"
+      ],
+      "diagnosticLenses": [
+        "Value at stake",
+        "Capital required",
+        "Return potential",
+        "Cash impact",
+        "Strategic importance",
+        "Risk",
+        "Confidence",
+        "Feasibility",
+        "Time to value",
+        "Dependency"
+      ],
+      "confidenceRules": [
+        "Do not rank investments solely by estimated upside.",
+        "Separate measured economics from assumption-driven projections.",
+        "Explicitly identify missing investment data.",
+        "Prioritization must reflect confidence, risk, capital intensity, and feasibility."
+      ],
+      "reasoningContext": {
+        "primaryObjective": "Determine where management should invest first to maximize risk-adjusted enterprise value creation.",
+        "reasoningSequence": [
+          "Identify candidate investment and remediation opportunities.",
+          "Estimate value at stake and capital requirements.",
+          "Assess strategic importance, risk, feasibility, and time to value.",
+          "Account for evidence confidence.",
+          "Rank priorities and explain trade-offs."
+        ],
+        "constraints": [
+          "Do not manufacture NPV or IRR without required assumptions.",
+          "Do not treat estimated benefits as guaranteed outcomes.",
+          "Identify dependencies and implementation constraints."
+        ]
+      },
+      "outputContract": {
+        "requiredOutputs": [
+          "Prioritized investment opportunities",
+          "Decision rationale",
+          "Value at stake",
+          "Capital and resource implications",
+          "Risk and confidence",
+          "Recommended sequencing"
+        ]
+      },
+      "metadata": {
+        "canonical": true,
+        "customerVisibleId": false,
+        "legacyLogicSources": [
+          "Structural Strategic Priority Integration"
+        ]
+      }
+    },
+    {
+      "id": "PB-010",
+      "canonicalQuestion": "What Are the Biggest Risks to Enterprise Value?",
+      "name": "Enterprise Value Risk Intelligence",
+      "category": "RISK",
+      "description": "Identifies, prioritizes, and explains the most material financial, commercial, operational, liquidity, concentration, capital, and strategic risks that could impair enterprise value.",
+      "version": "2.0.0",
+      "status": "ACTIVE",
+      "objectives": [
+        "Identify the largest current and emerging threats to enterprise value.",
+        "Quantify exposure where evidence permits.",
+        "Assess probability, severity, concentration, and controllability.",
+        "Prioritize risk mitigation actions."
+      ],
+      "requiredEvidence": [
+        "Income Statement",
+        "Balance Sheet",
+        "Cash Flow Statement",
+        "Comparative financial periods"
+      ],
+      "recommendedEvidence": [
+        "Debt schedules",
+        "Customer concentration",
+        "Supplier concentration",
+        "Product concentration",
+        "Working-capital data",
+        "Budgets and forecasts"
+      ],
+      "optionalEvidence": [
+        "Risk registers",
+        "Legal and regulatory information",
+        "Quality and compliance data",
+        "Insurance coverage",
+        "Market data",
+        "Operational continuity data",
+        "Strategic plans"
+      ],
+      "diagnosticQuestions": [
+        "Which risks could cause the greatest impairment to earnings, cash flow, capital, growth, or valuation?",
+        "Where are material concentrations or dependencies?",
+        "Are liquidity, leverage, covenant, customer, supplier, product, operational, regulatory, or execution risks increasing?",
+        "Which risks are already visible in financial performance?",
+        "Which risks require immediate mitigation?"
+      ],
+      "diagnosticLenses": [
+        "Liquidity",
+        "Leverage",
+        "Cash conversion",
+        "Customer concentration",
+        "Supplier concentration",
+        "Product concentration",
+        "Margin vulnerability",
+        "Operational dependency",
+        "Capital allocation",
+        "Growth quality",
+        "Regulatory and compliance exposure",
+        "Execution risk"
+      ],
+      "confidenceRules": [
+        "Separate observed risk indicators from hypothetical scenarios.",
+        "Do not assign probability without supporting evidence or explicit assumptions.",
+        "Quantify exposure only where evidence permits.",
+        "Identify unknown and unassessed risk areas explicitly."
+      ],
+      "reasoningContext": {
+        "primaryObjective": "Identify the most material threats to enterprise value and prioritize evidence-supported mitigation.",
+        "reasoningSequence": [
+          "Identify material risk indicators.",
+          "Trace each risk to affected value drivers.",
+          "Assess severity, probability where supportable, concentration, and controllability.",
+          "Identify interactions and cascading risks.",
+          "Rank mitigation priorities."
+        ],
+        "constraints": [
+          "Do not present hypothetical risks as established facts.",
+          "Do not assign unsupported probabilities.",
+          "Separate current exposure from emerging risk.",
+          "Highlight material evidence gaps."
+        ]
+      },
+      "outputContract": {
+        "requiredOutputs": [
+          "Enterprise value risk map",
+          "Top material risks",
+          "Evidence and warning indicators",
+          "Potential financial or enterprise value exposure",
+          "Confidence assessment",
+          "Priority mitigation actions"
+        ]
+      },
+      "metadata": {
+        "canonical": true,
+        "customerVisibleId": false,
+        "legacyLogicSources": [
+          "Enterprise Profit Leak Taxonomy Router",
+          "Structural Strategic Priority Integration"
+        ]
+      }
+    },
+    {
+      "id": "PB-011",
+      "canonicalQuestion": "Where Is Enterprise Value Being Eroded?",
+      "name": "Enterprise Value Erosion Intelligence",
+      "category": "ENTERPRISE_VALUE",
+      "description": "Identifies financial, commercial, operational, and capital-allocation factors that are destroying or constraining enterprise value.",
+      "version": "2.0.0",
+      "status": "ACTIVE",
+      "objectives": [
+        "Identify the largest sources of enterprise value erosion.",
+        "Distinguish earnings, cash, capital efficiency, growth, and risk drivers.",
+        "Quantify value leakage where evidence permits.",
+        "Prioritize controllable value recovery opportunities."
+      ],
+      "requiredEvidence": [
+        "Income Statement",
+        "Balance Sheet",
+        "Cash Flow Statement",
+        "Comparative financial periods"
+      ],
+      "recommendedEvidence": [
+        "Trial Balance",
+        "Segment or business-unit performance",
+        "Product profitability",
+        "Customer profitability",
+        "Capital expenditure data",
+        "Debt schedules"
+      ],
+      "optionalEvidence": [
+        "Strategic plans",
+        "Budgets and forecasts",
+        "Market data",
+        "Capacity utilization",
+        "Regional performance",
+        "Investment project returns"
+      ],
+      "diagnosticQuestions": [
+        "Which earnings, cash-flow, growth, capital-efficiency, or risk factors are eroding value?",
+        "Where is economic performance materially below historical or expected levels?",
+        "Which products, customers, operations, assets, or investments are dilutive?",
+        "Is capital tied up in low-return or non-productive uses?",
+        "Which value losses are controllable?"
+      ],
+      "diagnosticLenses": [
+        "Profit leakage",
+        "Margin erosion",
+        "Cash conversion",
+        "Working-capital intensity",
+        "Capital efficiency",
+        "Return on invested capital",
+        "Growth quality",
+        "Product/customer/segment economics",
+        "Asset utilization",
+        "Risk concentration"
+      ],
+      "confidenceRules": [
+        "Do not equate accounting variance automatically with enterprise value destruction.",
+        "Value conclusions must identify the underlying economic mechanism.",
+        "Quantification must state assumptions when valuation inputs are incomplete.",
+        "Separate measured value leakage from directional risk."
+      ],
+      "reasoningContext": {
+        "primaryObjective": "Locate and prioritize the mechanisms eroding enterprise value.",
+        "reasoningSequence": [
+          "Identify material deterioration in earnings, cash, growth, returns, and risk.",
+          "Trace deterioration to underlying business drivers.",
+          "Assess persistence and controllability.",
+          "Quantify value impact where evidence supports it.",
+          "Rank value recovery opportunities."
+        ],
+        "constraints": [
+          "Do not present speculative valuation as fact.",
+          "Separate financial value erosion from risk of future erosion.",
+          "Avoid double-counting overlapping value drivers."
+        ]
+      },
+      "outputContract": {
+        "requiredOutputs": [
+          "Enterprise value erosion map",
+          "Material value leakage sources",
+          "Root causes",
+          "Estimated value at stake where supportable",
+          "Confidence assessment",
+          "Priority value recovery opportunities",
+          "Recommended actions"
+        ]
+      },
+      "metadata": {
+        "canonical": true,
+        "customerVisibleId": false,
+        "legacyLogicSources": [
+          "Enterprise Profit Leak Taxonomy Router",
+          "Revenue Quality & Variance Audit",
+          "Customer & Channel Profitability Matrix",
+          "Geographic & Regional Variance Audit"
+        ]
+      }
+    },
+    {
+      "id": "PB-012",
+      "canonicalQuestion": "What Should Management Focus on During the Next 90 Days?",
+      "name": "Executive Performance Prioritization Intelligence",
+      "category": "EXECUTIVE_ORCHESTRATION",
+      "description": "Synthesizes available enterprise diagnostic intelligence into a prioritized, evidence-based 90-day executive action agenda focused on enterprise value creation and protection.",
+      "version": "2.0.0",
+      "status": "ACTIVE",
+      "objectives": [
+        "Consolidate material findings from available blueprint analyses.",
+        "Identify highest-value problems, opportunities, and risks.",
+        "Prioritize by value, urgency, confidence, controllability, feasibility, investment, and time to impact.",
+        "Define a practical 90-day executive agenda with ownership and sequencing.",
+        "Surface decisions, dependencies, evidence gaps, and resource constraints."
+      ],
+      "requiredEvidence": [
+        "Outputs from one or more completed EPI blueprint analyses"
+      ],
+      "recommendedEvidence": [
+        "Executive objectives",
+        "Strategic priorities",
+        "Board priorities",
+        "Budgets and forecasts",
+        "Available resources",
+        "Risk appetite",
+        "Current transformation initiatives"
+      ],
+      "optionalEvidence": [
+        "Investment proposals",
+        "Implementation roadmaps",
+        "Scenario analyses",
+        "Management constraints",
+        "Benchmark intelligence"
+      ],
+      "diagnosticQuestions": [
+        "What are the most material findings across available analyses?",
+        "Which issues have the greatest enterprise value at stake?",
+        "Which priorities are urgent, controllable, feasible, and high-confidence?",
+        "Which actions create the fastest credible value?",
+        "What dependencies or constraints affect sequencing?",
+        "Who should own each priority and how should success be measured?"
+      ],
+      "diagnosticLenses": [
+        "Enterprise value at stake",
+        "Root-cause materiality",
+        "Urgency",
+        "Confidence",
+        "Controllability",
+        "Investment required",
+        "Expected ROI or payback",
+        "Feasibility",
+        "Time to value",
+        "Dependencies",
+        "Executive ownership",
+        "Risk and resilience"
+      ],
+      "confidenceRules": [
+        "Do not state a root cause as fact unless supported by evidence.",
+        "Separate observed facts from inference and hypothesis.",
+        "Quantify impact only where evidence supports calculation.",
+        "Preserve UNKNOWN where evidence is insufficient.",
+        "Material conclusions must retain evidence, provenance, and confidence."
+      ],
+      "reasoningContext": {
+        "primaryObjective": "Determine what management should focus on during the next 90 days to maximize evidence-supported enterprise value creation and protection.",
+        "reasoningSequence": [
+          "Consolidate findings from available blueprint analyses.",
+          "Normalize overlaps and avoid double-counting.",
+          "Identify common root causes and dependencies.",
+          "Assess value, urgency, confidence, controllability, feasibility, investment, and time to impact.",
+          "Rank priorities and explain trade-offs.",
+          "Assign recommended ownership and sequencing.",
+          "Construct a 30-60-90 day agenda.",
+          "Define outcomes, KPIs, decisions, and review points."
+        ],
+        "constraints": [
+          "Do not invent findings from blueprints not analyzed.",
+          "Do not double-count overlapping value opportunities.",
+          "Do not manufacture ROI, payback, NPV, or IRR without evidence.",
+          "Do not prioritize solely by estimated upside.",
+          "Identify evidence gaps and unresolved decisions."
+        ]
+      },
+      "outputContract": {
+        "requiredOutputs": [
+          "Executive synthesis",
+          "Top enterprise priorities",
+          "Root-cause linkage",
+          "Value at stake where supportable",
+          "Priority rationale",
+          "Confidence assessment",
+          "Recommended executive owner",
+          "30-60-90 day action plan",
+          "Expected outcomes and KPIs",
+          "Investment and resource implications",
+          "Dependencies and risks",
+          "Key executive decisions required"
+        ]
+      },
+      "metadata": {
+        "canonical": true,
+        "customerVisibleId": false,
+        "legacyLogicSources": [
+          "Structural Strategic Priority Integration",
+          "Executive Performance Prioritization Blueprint"
+        ],
+        "orchestrationBlueprint": true,
+        "consumesBlueprintOutputs": [
+          "PB-001",
+          "PB-002",
+          "PB-003",
+          "PB-004",
+          "PB-005",
+          "PB-006",
+          "PB-007",
+          "PB-008",
+          "PB-009",
+          "PB-010",
+          "PB-011"
+        ]
+      }
+    }
+  ]
+}
