@@ -1,4 +1,3 @@
-
 <!--
 ====================================================================
 Enterprise Performance Intelligence™
@@ -28,13 +27,9 @@ All Rights Reserved.
 
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="Enterprise Performance Intelligence™ Executive Workspace">
+    <meta name="description" content="Enterprise Performance Intelligence™ Executive Workspace">
 
     <title>
 
@@ -46,743 +41,709 @@ All Rights Reserved.
     <!-- Google Fonts                                           -->
     <!-- ===================================================== -->
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
     <!-- ===================================================== -->
     <!-- Stylesheet                                              -->
     <!-- ===================================================== -->
 
-    <link rel="stylesheet" href="workspace.css">
+    <link rel="stylesheet" href="css/workspace.css">
 
 </head>
 
 <body>
 
-<!-- ========================================================= -->
-<!-- EXECUTIVE WORKSPACE™                                      -->
-<!-- ========================================================= -->
+    <!-- ========================================================= -->
+    <!-- EXECUTIVE WORKSPACE™                                      -->
+    <!-- ========================================================= -->
 
-<div id="workspace-shell">
+    <div id="workspace-shell">
 
-<!-- ========================================================= -->
-<!-- GLOBAL HEADER                                              -->
-<!-- ========================================================= -->
+        <!-- ========================================================= -->
+        <!-- GLOBAL HEADER                                              -->
+        <!-- ========================================================= -->
 
-<header id="workspace-header">
+        <header id="workspace-header">
 
-    <div class="header-left">
+            <div class="header-left">
 
-        <div class="brand-logo">
+                <div class="brand-logo">
 
-            <img
-                src="assets/images/hic-logo.svg"
-                alt="Hargun Intelligence Compass Logo">
+                    <img src="assets/images/hic-logo.svg" alt="Hargun Intelligence Compass Logo">
 
-        </div>
+                </div>
 
-        <div class="brand-information">
+                <div class="brand-information">
 
-            <h1>
+                    <h1>
 
-                Enterprise Performance Intelligence™
+                        Enterprise Performance Intelligence™
 
-            </h1>
+                    </h1>
 
-            <p>
+                    <p>
 
-                Executive Workspace™
+                        Executive Workspace™
 
-            </p>
+                    </p>
 
-        </div>
-
-    </div>
-
-    <div class="header-right">
-
-        <div class="executive-profile">
-
-            <div class="executive-avatar">
-
-                HA
+                </div>
 
             </div>
 
-            <div class="executive-details">
+            <div class="header-right">
 
-                <h3 id="executive-name">
+                <div class="executive-profile">
 
-                    Harvinder Singh Alag
+                    <div class="executive-avatar">
 
-                </h3>
+                        HA
 
-                <p id="executive-role">
+                    </div>
 
-                    Administrator
+                    <div class="executive-details">
+
+                        <h3 id="executive-name">
+
+                            Harvinder Singh Alag
+
+                        </h3>
+
+                        <p id="executive-role">
+
+                            Administrator
+
+                        </p>
+
+                        <span id="session-indicator" class="secure-session">
+
+                            ● Secure Enterprise Session
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <button id="logout-button" type="button">
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- ========================================================= -->
+        <!-- MAIN WORKSPACE                                             -->
+        <!-- ========================================================= -->
+
+        <main id="workspace-main">
+
+            <!-- ========================================================= -->
+            <!-- EXECUTIVE SESSION                                          -->
+            <!-- ========================================================= -->
+
+            <section id="executive-session" class="workspace-card">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+
+                        Executive Session™
+
+                    </span>
+
+                    <h2>
+
+                        Welcome Back
+
+                    </h2>
+
+                </div>
+
+                <div class="session-grid">
+
+                    <div class="session-item">
+
+                        <label>
+
+                            Executive
+
+                        </label>
+
+                        <strong id="session-executive">
+
+                            Harvinder Singh Alag
+
+                        </strong>
+
+                    </div>
+
+                    <div class="session-item">
+
+                        <label>
+
+                            Role
+
+                        </label>
+
+                        <strong id="session-role">
+
+                            Administrator
+
+                        </strong>
+
+                    </div>
+
+                    <div class="session-item">
+
+                        <label>
+
+                            Enterprise
+
+                        </label>
+
+                        <strong id="session-enterprise">
+
+                            Hargun Intelligence Compass™
+
+                        </strong>
+
+                    </div>
+
+                    <div class="session-item">
+
+                        <label>
+
+                            Industry
+
+                        </label>
+
+                        <strong id="session-industry">
+
+                            Management Consulting
+
+                        </strong>
+
+                    </div>
+
+                    <div class="session-item">
+
+                        <label>
+
+                            Session Status
+
+                        </label>
+
+                        <strong id="session-status" class="status-ready">
+
+                            Active
+
+                        </strong>
+
+                    </div>
+
+                    <div class="session-item">
+
+                        <label>
+
+                            Last Login
+
+                        </label>
+
+                        <strong id="last-login">
+
+                            Today
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- ========================================================= -->
+            <!-- OPERATIONAL WORKSPACE                                     -->
+            <!-- ========================================================= -->
+
+            <section id="workspace-grid">
+
+                <!-- ===================================================== -->
+                <!-- ENTERPRISE SUMMARY                                    -->
+                <!-- ===================================================== -->
+
+                <section id="enterprise-summary" class="workspace-card">
+
+                    <div class="section-heading">
+
+                        <span class="section-label">
+
+                            Enterprise™
+
+                        </span>
+
+                        <h2>
+
+                            Enterprise Summary
+
+                        </h2>
+
+                    </div>
+
+                    <div class="summary-grid">
+
+                        <div class="summary-item">
+
+                            <label>
+
+                                Enterprise
+
+                            </label>
+
+                            <strong id="enterprise-name">
+
+                                Hargun Intelligence Compass™
+
+                            </strong>
+
+                        </div>
+
+                        <div class="summary-item">
+
+                            <label>
+
+                                Industry
+
+                            </label>
+
+                            <strong id="enterprise-industry">
+
+                                Management Consulting
+
+                            </strong>
+
+                        </div>
+
+                        <div class="summary-item">
+
+                            <label>
+
+                                Environment
+
+                            </label>
+
+                            <strong id="environment-name">
+
+                                Enterprise Performance Intelligence™
+
+                            </strong>
+
+                        </div>
+
+                        <div class="summary-item">
+
+                            <label>
+
+                                Tenant ID
+
+                            </label>
+
+                            <strong id="tenant-id">
+
+                                TENANT-HARGUN-MASTER
+
+                            </strong>
+
+                        </div>
+
+                        <div class="summary-item">
+
+                            <label>
+
+                                Enterprise Status
+
+                            </label>
+
+                            <strong id="enterprise-status" class="status-ready">
+
+                                Operational
+
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- ===================================================== -->
+                <!-- CURRENT ANALYSIS                                      -->
+                <!-- ===================================================== -->
+
+                <section id="current-analysis" class="workspace-card">
+
+                    <div class="section-heading">
+
+                        <span class="section-label">
+
+                            Executive Analysis™
+
+                        </span>
+
+                        <h2>
+
+                            Current Executive Analysis
+
+                        </h2>
+
+                    </div>
+
+                    <div class="analysis-placeholder">
+
+                        <div class="analysis-icon">
+
+                            📊
+
+                        </div>
+
+                        <h3>
+
+                            No Active Executive Analysis
+
+                        </h3>
+
+                        <p>
+
+                            Start a new Executive Analysis to identify
+                            opportunities, risks and enterprise value drivers.
+
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <!-- ===================================================== -->
+                <!-- EXECUTIVE BRIEF HISTORY                               -->
+                <!-- ===================================================== -->
+
+                <section id="brief-history" class="workspace-card">
+
+                    <div class="section-heading">
+
+                        <span class="section-label">
+
+                            Executive Intelligence Brief™
+
+                        </span>
+
+                        <h2>
+
+                            Previous Executive Briefs
+
+                        </h2>
+
+                    </div>
+
+                    <div class="history-placeholder">
+
+                        <div class="history-icon">
+
+                            📑
+
+                        </div>
+
+                        <h3>
+
+                            No Executive Briefs Available
+
+                        </h3>
+
+                        <p>
+
+                            Executive Intelligence Briefs generated for this
+                            enterprise will appear here.
+
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <!-- ===================================================== -->
+                <!-- PLATFORM STATUS                                       -->
+                <!-- ===================================================== -->
+
+                <section id="platform-status" class="workspace-card">
+
+                    <div class="section-heading">
+
+                        <span class="section-label">
+
+                            Platform™
+
+                        </span>
+
+                        <h2>
+
+                            Platform Status
+
+                        </h2>
+
+                    </div>
+
+                    <div class="status-list">
+
+                        <div class="status-row">
+
+                            <span>
+
+                                Blueprint Knowledge Base™
+
+                            </span>
+
+                            <span class="status-ready">
+
+                                Ready
+
+                            </span>
+
+                        </div>
+
+                        <div class="status-row">
+
+                            <span>
+
+                                Blueprint Intelligence Engine™
+
+                            </span>
+
+                            <span class="status-ready">
+
+                                Ready
+
+                            </span>
+
+                        </div>
+
+                        <div class="status-row">
+
+                            <span>
+
+                                Financial Intelligence Processing Engine™
+
+                            </span>
+
+                            <span class="status-ready">
+
+                                Ready
+
+                            </span>
+
+                        </div>
+
+                        <div class="status-row">
+
+                            <span>
+
+                                Confidence Engine™
+
+                            </span>
+
+                            <span class="status-ready">
+
+                                Ready
+
+                            </span>
+
+                        </div>
+
+                        <div class="status-row">
+
+                            <span>
+
+                                AI Executive Analysis™
+
+                            </span>
+
+                            <span class="status-ready">
+
+                                Ready
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </section>
+            <!-- ========================================================= -->
+            <!-- RECENT ACTIVITY                                           -->
+            <!-- ========================================================= -->
+
+            <section id="recent-activity" class="workspace-card">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+
+                        Activity™
+
+                    </span>
+
+                    <h2>
+
+                        Recent Activity
+
+                    </h2>
+
+                </div>
+
+                <div class="activity-placeholder">
+
+                    <div class="activity-icon">
+
+                        ⏳
+
+                    </div>
+
+                    <h3>
+
+                        No Recent Activity
+
+                    </h3>
+
+                    <p>
+
+                        Activity relating to Executive Analyses,
+                        document uploads,
+                        processing,
+                        and Executive Intelligence Briefs
+                        will appear here.
+
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- ========================================================= -->
+            <!-- EXECUTIVE ACTION CENTER                                   -->
+            <!-- ========================================================= -->
+
+            <section id="workspace-actions" class="workspace-card">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+
+                        Executive Actions™
+
+                    </span>
+
+                    <h2>
+
+                        Ready To Begin?
+
+                    </h2>
+
+                </div>
+
+                <p>
+
+                    Begin a new Executive Analysis by selecting one of the
+                    Executive Diagnostic Blueprints™.
 
                 </p>
 
-                <span
-                    id="session-indicator"
-                    class="secure-session">
+                <div class="action-buttons">
 
-                    ● Secure Enterprise Session
+                    <button id="start-analysis-button" class="primary-button" type="button" data-action="new-analysis">
 
-                </span>
+                        Start New Executive Analysis →
 
-            </div>
+                    </button>
 
-        </div>
+                </div>
 
-        <button
-            id="logout-button"
-            type="button">
+            </section>
 
-            Logout
+        </main>
 
-        </button>
+        <!-- ========================================================= -->
+        <!-- FOOTER                                                    -->
+        <!-- ========================================================= -->
 
-    </div>
+        <footer id="workspace-footer">
 
-</header>
+            <div class="footer-left">
 
-<!-- ========================================================= -->
-<!-- MAIN WORKSPACE                                             -->
-<!-- ========================================================= -->
-
-<main id="workspace-main">
-
-<!-- ========================================================= -->
-<!-- EXECUTIVE SESSION                                          -->
-<!-- ========================================================= -->
-
-<section
-    id="executive-session"
-    class="workspace-card">
-
-    <div class="section-heading">
-
-        <span class="section-label">
-
-            Executive Session™
-
-        </span>
-
-        <h2>
-
-            Welcome Back
-
-        </h2>
-
-    </div>
-
-    <div class="session-grid">
-
-        <div class="session-item">
-
-            <label>
-
-                Executive
-
-            </label>
-
-            <strong id="session-executive">
-
-                Harvinder Singh Alag
-
-            </strong>
-
-        </div>
-
-        <div class="session-item">
-
-            <label>
-
-                Role
-
-            </label>
-
-            <strong id="session-role">
-
-                Administrator
-
-            </strong>
-
-        </div>
-
-        <div class="session-item">
-
-            <label>
-
-                Enterprise
-
-            </label>
-
-            <strong id="session-enterprise">
-
-                Hargun Intelligence Compass™
-
-            </strong>
-
-        </div>
-
-        <div class="session-item">
-
-            <label>
-
-                Industry
-
-            </label>
-
-            <strong id="session-industry">
-
-                Management Consulting
-
-            </strong>
-
-        </div>
-
-        <div class="session-item">
-
-            <label>
-
-                Session Status
-
-            </label>
-
-            <strong
-                id="session-status"
-                class="status-ready">
-
-                Active
-
-            </strong>
-
-        </div>
-
-        <div class="session-item">
-
-            <label>
-
-                Last Login
-
-            </label>
-
-            <strong id="last-login">
-
-                Today
-
-            </strong>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- ========================================================= -->
-<!-- OPERATIONAL WORKSPACE                                     -->
-<!-- ========================================================= -->
-
-<section id="workspace-grid">
-
-    <!-- ===================================================== -->
-    <!-- ENTERPRISE SUMMARY                                    -->
-    <!-- ===================================================== -->
-
-    <section
-        id="enterprise-summary"
-        class="workspace-card">
-
-        <div class="section-heading">
-
-            <span class="section-label">
-
-                Enterprise™
-
-            </span>
-
-            <h2>
-
-                Enterprise Summary
-
-            </h2>
-
-        </div>
-
-        <div class="summary-grid">
-
-            <div class="summary-item">
-
-                <label>
-
-                    Enterprise
-
-                </label>
-
-                <strong id="enterprise-name">
-
-                    Hargun Intelligence Compass™
-
-                </strong>
-
-            </div>
-
-            <div class="summary-item">
-
-                <label>
-
-                    Industry
-
-                </label>
-
-                <strong id="enterprise-industry">
-
-                    Management Consulting
-
-                </strong>
-
-            </div>
-
-            <div class="summary-item">
-
-                <label>
-
-                    Environment
-
-                </label>
-
-                <strong id="environment-name">
+                <strong>
 
                     Enterprise Performance Intelligence™
 
                 </strong>
 
-            </div>
+                <p>
 
-            <div class="summary-item">
+                    Executive Workspace™
 
-                <label>
-
-                    Tenant ID
-
-                </label>
-
-                <strong id="tenant-id">
-
-                    TENANT-HARGUN-MASTER
-
-                </strong>
+                </p>
 
             </div>
 
-            <div class="summary-item">
+            <div class="footer-center">
 
-                <label>
+                <p>
 
-                    Enterprise Status
+                    Version 1.0.0
 
-                </label>
+                </p>
 
-                <strong
-                    id="enterprise-status"
-                    class="status-ready">
+                <p>
 
-                    Operational
+                    Secure Enterprise Platform
 
-                </strong>
+                </p>
 
             </div>
 
-        </div>
+            <div class="footer-right">
 
-    </section>
+                <p>
 
-    <!-- ===================================================== -->
-    <!-- CURRENT ANALYSIS                                      -->
-    <!-- ===================================================== -->
+                    © 2026
 
-    <section
-        id="current-analysis"
-        class="workspace-card">
+                    Hargun Intelligence Compass™
 
-        <div class="section-heading">
+                </p>
 
-            <span class="section-label">
+                <p>
 
-                Executive Analysis™
+                    All Rights Reserved
 
-            </span>
-
-            <h2>
-
-                Current Executive Analysis
-
-            </h2>
-
-        </div>
-
-        <div class="analysis-placeholder">
-
-            <div class="analysis-icon">
-
-                📊
+                </p>
 
             </div>
 
-            <h3>
-
-                No Active Executive Analysis
-
-            </h3>
-
-            <p>
-
-                Start a new Executive Analysis to identify
-                opportunities, risks and enterprise value drivers.
-
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- ===================================================== -->
-    <!-- EXECUTIVE BRIEF HISTORY                               -->
-    <!-- ===================================================== -->
-
-    <section
-        id="brief-history"
-        class="workspace-card">
-
-        <div class="section-heading">
-
-            <span class="section-label">
-
-                Executive Intelligence Brief™
-
-            </span>
-
-            <h2>
-
-                Previous Executive Briefs
-
-            </h2>
-
-        </div>
-
-        <div class="history-placeholder">
-
-            <div class="history-icon">
-
-                📑
-
-            </div>
-
-            <h3>
-
-                No Executive Briefs Available
-
-            </h3>
-
-            <p>
-
-                Executive Intelligence Briefs generated for this
-                enterprise will appear here.
-
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- ===================================================== -->
-    <!-- PLATFORM STATUS                                       -->
-    <!-- ===================================================== -->
-
-    <section
-        id="platform-status"
-        class="workspace-card">
-
-        <div class="section-heading">
-
-            <span class="section-label">
-
-                Platform™
-
-            </span>
-
-            <h2>
-
-                Platform Status
-
-            </h2>
-
-        </div>
-
-        <div class="status-list">
-
-            <div class="status-row">
-
-                <span>
-
-                    Blueprint Knowledge Base™
-
-                </span>
-
-                <span class="status-ready">
-
-                    Ready
-
-                </span>
-
-            </div>
-
-            <div class="status-row">
-
-                <span>
-
-                    Blueprint Intelligence Engine™
-
-                </span>
-
-                <span class="status-ready">
-
-                    Ready
-
-                </span>
-
-            </div>
-
-            <div class="status-row">
-
-                <span>
-
-                    Financial Intelligence Processing Engine™
-
-                </span>
-
-                <span class="status-ready">
-
-                    Ready
-
-                </span>
-
-            </div>
-
-            <div class="status-row">
-
-                <span>
-
-                    Confidence Engine™
-
-                </span>
-
-                <span class="status-ready">
-
-                    Ready
-
-                </span>
-
-            </div>
-
-            <div class="status-row">
-
-                <span>
-
-                    AI Executive Analysis™
-
-                </span>
-
-                <span class="status-ready">
-
-                    Ready
-
-                </span>
-
-            </div>
-
-        </div>
-
-    </section>
-
-</section>
-<!-- ========================================================= -->
-<!-- RECENT ACTIVITY                                           -->
-<!-- ========================================================= -->
-
-<section
-    id="recent-activity"
-    class="workspace-card">
-
-    <div class="section-heading">
-
-        <span class="section-label">
-
-            Activity™
-
-        </span>
-
-        <h2>
-
-            Recent Activity
-
-        </h2>
+        </footer>
 
     </div>
 
-    <div class="activity-placeholder">
+    <!-- ========================================================= -->
+    <!-- JAVASCRIPT                                                -->
+    <!-- ========================================================= -->
 
-        <div class="activity-icon">
-
-            ⏳
-
-        </div>
-
-        <h3>
-
-            No Recent Activity
-
-        </h3>
-
-        <p>
-
-            Activity relating to Executive Analyses,
-            document uploads,
-            processing,
-            and Executive Intelligence Briefs
-            will appear here.
-
-        </p>
-
-    </div>
-
-</section>
-
-<!-- ========================================================= -->
-<!-- EXECUTIVE ACTION CENTER                                   -->
-<!-- ========================================================= -->
-
-<section
-    id="workspace-actions"
-    class="workspace-card">
-
-    <div class="section-heading">
-
-        <span class="section-label">
-
-            Executive Actions™
-
-        </span>
-
-        <h2>
-
-            Ready To Begin?
-
-        </h2>
-
-    </div>
-
-    <p>
-
-        Begin a new Executive Analysis by selecting one of the
-        Executive Diagnostic Blueprints™.
-
-    </p>
-
-    <div class="action-buttons">
-
-        <button
-    id="start-analysis-button"
-    class="primary-button"
-    type="button"
-    data-action="new-analysis">
-
-    Start New Executive Analysis →
-
-</button>
-
-    </div>
-
-</section>
-
-</main>
-
-<!-- ========================================================= -->
-<!-- FOOTER                                                    -->
-<!-- ========================================================= -->
-
-<footer id="workspace-footer">
-
-    <div class="footer-left">
-
-        <strong>
-
-            Enterprise Performance Intelligence™
-
-        </strong>
-
-        <p>
-
-            Executive Workspace™
-
-        </p>
-
-    </div>
-
-    <div class="footer-center">
-
-        <p>
-
-            Version 1.0.0
-
-        </p>
-
-        <p>
-
-            Secure Enterprise Platform
-
-        </p>
-
-    </div>
-
-    <div class="footer-right">
-
-        <p>
-
-            © 2026
-
-            Hargun Intelligence Compass™
-
-        </p>
-
-        <p>
-
-            All Rights Reserved
-
-        </p>
-
-    </div>
-
-</footer>
-
-</div>
-
-<!-- ========================================================= -->
-<!-- JAVASCRIPT                                                -->
-<!-- ========================================================= -->
-
-<script src="js/workspace.js"></script>
+    <script src="js/workspace.js"></script>
 
 </body>
 
