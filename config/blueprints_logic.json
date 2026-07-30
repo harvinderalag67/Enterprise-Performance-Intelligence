@@ -1,0 +1,88 @@
+{
+  "platform": "Enterprise Performance Intelligence™ Platform",
+  "version": "1.0.0",
+  "classification": "Proprietary / Design History File (DHF) Component",
+  "framework": "EEPD™ Standard",
+  "global_constraints": {
+    "universal_capital_taxonomy": ["Value Lost", "Value Destroyed", "Value Delayed"],
+    "recommendation_template_standard": {
+      "finding_core_rationale": "Root-cause ledger evidence trace.",
+      "business_significance": "Macro enterprise risk mapping.",
+      "financial_impact_assessment": "Absolute expected EBITDA or Cash release values.",
+      "action_directive": "Specific operational mandate.",
+      "accountability_target": "Executive Owner, Timeline, and Engine Confidence Score."
+    }
+  },
+  "diagnostic_blueprints": [
+    {
+      "id": "PB-001",
+      "name": "EBITDA Decay & Velocity Matrix",
+      "core_objective": "Traces operational profit decay down to primary macro pillars: Gross Margin Erosion, Operating Leverage Failure, or Revenue Quality drops.",
+      "logic_tree": "Gross Revenue -> Net Revenue -> Cost of Goods Sold (COGS) -> Gross Margin -> Operating Overhead (SG&A) -> Realized EBITDA",
+      "ai_prompt_constraints": "Analyze the client's income statement and profit sub-ledgers. You must sequentially audit the velocity of profit erosion from Gross to Net margins. Isolate whether EBITDA contraction is a function of primary margin degradation (COGS expanding faster than revenue) or a breakdown in operating leverage (fixed overhead sticky during revenue plateaus). Differentiate between temporary fluctuations and structural profit leaks."
+    },
+    {
+      "id": "PB-002",
+      "name": "Enterprise Profit Leak Taxonomy Router",
+      "core_objective": "Systematically categorizes hidden losses across pricing, procurement, and operations into Value Lost or Value Destroyed.",
+      "logic_tree": "Transactional Arrays -> Leak Detection Router -> Value Lost (Revenue Leaks) vs. Value Destroyed (Overhead/Supply Leaks)",
+      "ai_prompt_constraints": "Scan the transactional ledger strings. Execute the primary Profit Leak Taxonomy. Route identified inefficiencies into strict classifications: 'Value Lost' (un-passed cost inflation, unauthorized credit adjustments) and 'Value Destroyed' (operational overhead capacity waste, procurement premium surges). Measure profit at the lowest meaningful level—SKU, product line, or channel."
+    },
+    {
+      "id": "PB-003",
+      "name": "Revenue Quality & Variance Audit",
+      "core_objective": "Audits unmapped trade incentives, channel deductions, and unauthorized distributor claim variations.",
+      "logic_tree": "Gross Booked Revenue -> Commercial Discounts -> Intermediary Claims/Rebates -> Unauthorized Deviations -> Net Revenue Quality",
+      "ai_prompt_constraints": "Audit the commercial ledger accounts for revenue quality variances. Calculate the Gross-to-Net revenue decay bridge. Isolate leakage points where localized commercial adjustments, channel distributor incentives, or platform transaction commissions are growing faster than underlying volume. Flag systemic pricing compliance drift across regional customer groups."
+    },
+    {
+      "id": "PB-004",
+      "name": "Working Capital Cash Flow Accelerator",
+      "core_objective": "Accelerates the Cash Conversion Cycle by identifying bottlenecks within DSO, DIO, and DPO metrics.",
+      "logic_tree": "Days Sales Outstanding (DSO) + Days Inventory Outstanding (DIO) - Days Payable Outstanding (DPO) -> Net Cash Conversion Cycle (CCC)",
+      "ai_prompt_constraints": "Audit the Balance Sheet and operational aging ledger arrays. Measure trapped cash flow velocity. Pinpoint cash bottlenecks by isolating accounts receivable aging structures exceeding standard credit lines (DSO), slow-moving or obsolete inventory stockpiles (DIO), and sub-optimal supplier payment cycles (DPO). Quantify the absolute capital velocity release potential in cold currency."
+    },
+    {
+      "id": "PB-005",
+      "name": "Operational Leverage & Cost Creep",
+      "core_objective": "Audits fixed vs. variable scaling mismatches across functional corporate overhead accounts.",
+      "logic_tree": "Variable Costs -> Semi-Variable Costs -> Fixed Structural Overhead Base -> Operating Leverage Coefficient",
+      "ai_prompt_constraints": "Evaluate administrative, general corporate, and selling overhead accounts against top-line volume variations over trailing multi-period windows. Map cost behaviors according to the Enterprise Cost Hierarchy™. Identify 'sticky costs'—expenses that scale up instantly during periods of high revenue volume but fail to compress during cyclical pullbacks or structural plateaus."
+    },
+    {
+      "id": "PB-006",
+      "name": "Product & Portfolio Mix Drift",
+      "core_objective": "Evaluates Product/SKU Mix changes, contribution margins, and value creation dimensions across segment portfolios.",
+      "logic_tree": "Total Portfolio Volume -> Core Business Segments -> Product/SKU Sub-Groups -> Margin Dilution Matrix",
+      "ai_prompt_constraints": "Evaluate all active business units and product categories as an investment portfolio rather than isolated operations. Assess performance dimensions simultaneously: revenue expansion rate, gross contribution margin, and capital efficiency. Identify instances where high-volume, low-margin transactions are cannibalizing fixed enterprise capacity at the cost of high-yield segments."
+    },
+    {
+      "id": "PB-007",
+      "name": "Customer & Channel Profitability Matrix",
+      "core_objective": "Isolates net margins across customer tiers and distribution footprints against direct cost-to-serve metrics.",
+      "logic_tree": "Gross Customer Revenue -> Direct Cost-to-Serve -> Intermediary/Platform Fees -> Net Account Yield",
+      "ai_prompt_constraints": "Examine transaction arrays to calculate the direct cost-to-serve per client account and distribution channel. Isolate account footprints in the lowest performance decile where custom service-level agreements, out-of-boundary delivery requirements, or high channel fees render the net contribution value negative."
+    },
+    {
+      "id": "PB-008",
+      "name": "Geographic & Regional Variance Audit",
+      "core_objective": "Evaluates territorial operational performance variances, spatial infrastructure costs, and supply chain frictions.",
+      "logic_tree": "Territorial Revenue -> Regional Supply/Logistics Overhead -> Spatial Fixed Facility Burdens -> Regional Contribution Spread",
+      "ai_prompt_constraints": "Segment the trial balances along regional, spatial, and territorial accounting codes. Normalize territorial cost comparison structures to account for local lifecycle differences and regional market scale. Pinpoint underperforming geographies where localized supply chain constraints, real estate overheads, or distribution channels are pulling down overall enterprise EBITDA."
+    },
+    {
+      "id": "PB-009",
+      "name": "Capacity Utilization & Overhead Absorption",
+      "core_objective": "Quantifies fixed asset under-recovery, idle labor cost allocations, and operational infrastructure waste.",
+      "logic_tree": "Theoretical Output Capacity -> Actual Logged Throughput -> Fixed Cost Pool -> Idle Overhead Absorption Variance",
+      "ai_prompt_constraints": "Parse operational asset frameworks, facility logs, and personnel cost records. Calculate the precise under-recovery of fixed overhead driven by idle capacity, structural infrastructure downtime, or sub-optimal execution schedules. Quantify this unabsorbed fixed capacity in absolute financial leakage terms."
+    },
+    {
+      "id": "PB-010",
+      "name": "Structural Strategic Priority Integration",
+      "core_objective": "Aggregates findings from PB-001 through PB-009 to prioritize controllable factor mandates in an Enterprise Priority Register™.",
+      "logic_tree": "Blueprints PB-001 to PB-009 Outputs -> Strategic Filter -> Prioritization Logic -> 90-Day Action Plan",
+      "ai_prompt_constraints": "Synthesize the collective outputs generated across diagnostic blueprints PB-001 through PB-009. Rank all identified value-recovery options by net financial impact and speed to value, prioritizing controllable variables before external macro vectors. Generate a cohesive, board-ready 90-Day Value Realization Plan mapping clear executive ownership, required investments, and concrete milestones to every operational mandate."
+    }
+  ]
+}
