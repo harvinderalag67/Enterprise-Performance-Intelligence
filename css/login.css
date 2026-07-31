@@ -1,0 +1,576 @@
+/* ==========================================================
+   Enterprise Performance Intelligence™
+   Executive Login Stylesheet
+   Version: 1.0
+   ========================================================== */
+
+:root {
+
+    --primary: #0A5FFF;
+    --primary-dark: #0848C7;
+
+    --navy: #0B1F3A;
+
+    --background: #F4F7FB;
+
+    --white: #FFFFFF;
+
+    --border: #DCE4EE;
+
+    --text: #1D2939;
+
+    --muted: #667085;
+
+    --success: #16A34A;
+
+    --danger: #DC2626;
+
+    --shadow: 0 12px 35px rgba(0, 0, 0, .08);
+
+    --radius: 18px;
+
+    --transition: .30s ease;
+
+}
+
+/* ==========================================================
+   RESET
+   ========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: 'Inter', sans-serif;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    min-height: 100vh;
+
+}
+
+/* ==========================================================
+   PAGE
+   ========================================================== */
+
+.login-page {
+
+    display: grid;
+
+    grid-template-columns: 1fr 520px;
+
+    min-height: 100vh;
+
+}
+
+/* ==========================================================
+   LEFT PANEL
+   ========================================================== */
+
+.brand-panel {
+
+    background:
+
+        linear-gradient(145deg,
+            #0B1F3A,
+            #113560,
+            #0A5FFF);
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 80px;
+
+}
+
+.brand-content {
+
+    max-width: 520px;
+
+}
+
+.company-logo {
+
+    width: 130px;
+
+    margin-bottom: 35px;
+
+}
+
+.brand-content h1 {
+
+    font-size: 2.6rem;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    margin-bottom: 18px;
+
+}
+
+.subtitle {
+
+    font-size: 1.15rem;
+
+    opacity: .92;
+
+    margin-bottom: 45px;
+
+    line-height: 1.7;
+
+}
+
+.feature-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+.feature {
+
+    background: rgba(255, 255, 255, .08);
+
+    border: 1px solid rgba(255, 255, 255, .15);
+
+    padding: 18px 22px;
+
+    border-radius: 12px;
+
+    font-size: 1rem;
+
+    backdrop-filter: blur(8px);
+
+}
+
+/* ==========================================================
+   RIGHT PANEL
+   ========================================================== */
+
+.login-panel {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px;
+
+}
+
+.login-card {
+
+    width: 100%;
+
+    background: white;
+
+    padding: 55px;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+}
+
+.login-card h2 {
+
+    font-size: 2rem;
+
+    margin-bottom: 12px;
+
+}
+
+.welcome-text {
+
+    color: var(--muted);
+
+    margin-bottom: 38px;
+
+    line-height: 1.6;
+
+}
+
+/* ==========================================================
+   FORM
+   ========================================================== */
+
+.form-group {
+
+    margin-bottom: 24px;
+
+}
+
+label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-weight: 600;
+
+}
+
+input[type=email],
+input[type=password] {
+
+    width: 100%;
+
+    height: 56px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 0 18px;
+
+    font-size: 1rem;
+
+    transition: var(--transition);
+
+    background: white;
+
+}
+
+input:focus {
+
+    outline: none;
+
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 4px rgba(10, 95, 255, .12);
+
+}
+
+/* ==========================================================
+   PASSWORD
+   ========================================================== */
+
+.password-wrapper {
+
+    position: relative;
+
+}
+
+.toggle-password {
+
+    position: absolute;
+
+    right: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: none;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 1.15rem;
+
+    color: var(--muted);
+
+}
+
+.toggle-password:hover {
+
+    color: var(--primary);
+
+}
+
+/* ==========================================================
+   REMEMBER
+   ========================================================== */
+
+.remember-row {
+
+    margin: 20px 0 30px;
+
+}
+
+.remember {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: .95rem;
+
+    color: var(--muted);
+
+}
+
+.remember input {
+
+    width: 18px;
+
+    height: 18px;
+
+}
+
+/* ==========================================================
+   BUTTON
+   ========================================================== */
+
+.login-button {
+
+    width: 100%;
+
+    height: 58px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    color: white;
+
+    background:
+
+        linear-gradient(135deg,
+            #0A5FFF,
+            #0848C7);
+
+    transition: var(--transition);
+
+}
+
+.login-button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+
+        0 12px 24px rgba(10, 95, 255, .28);
+
+}
+
+.login-button:active {
+
+    transform: translateY(0);
+
+}
+
+/* ==========================================================
+   LOADING
+   ========================================================== */
+
+.loading {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 28px;
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+}
+
+.hidden {
+
+    display: none;
+
+}
+
+.spinner {
+
+    width: 20px;
+
+    height: 20px;
+
+    border: 3px solid #E8EDF5;
+
+    border-top: 3px solid var(--primary);
+
+    border-radius: 50%;
+
+    animation: spin .8s linear infinite;
+
+}
+
+@keyframes spin {
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+/* ==========================================================
+   STATUS
+   ========================================================== */
+
+.status-message {
+
+    margin-top: 22px;
+
+    text-align: center;
+
+    font-weight: 600;
+
+    color: var(--danger);
+
+}
+
+.error-message {
+
+    display: block;
+
+    margin-top: 8px;
+
+    color: var(--danger);
+
+    font-size: .88rem;
+
+}
+
+/* ==========================================================
+   LINKS
+   ========================================================== */
+
+.links {
+
+    margin-top: 35px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: .95rem;
+
+}
+
+.links a {
+
+    text-decoration: none;
+
+    color: var(--primary);
+
+    transition: var(--transition);
+
+}
+
+.links a:hover {
+
+    color: var(--primary-dark);
+
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+footer {
+
+    position: fixed;
+
+    bottom: 15px;
+
+    width: 100%;
+
+    text-align: center;
+
+    color: #667085;
+
+    font-size: .85rem;
+
+    line-height: 1.6;
+
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media(max-width:992px) {
+
+    .login-page {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .brand-panel {
+
+        display: none;
+
+    }
+
+    .login-panel {
+
+        padding: 25px;
+
+    }
+
+    .login-card {
+
+        padding: 35px;
+
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .login-card {
+
+        padding: 28px;
+
+    }
+
+    .login-card h2 {
+
+        font-size: 1.6rem;
+
+    }
+
+    .links {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+
+    }
+
+}

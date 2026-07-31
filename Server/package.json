@@ -1,0 +1,52 @@
+{
+    "name": "enterprise-performance-intelligence-server",
+    "version": "1.0.0",
+    "description": "Backend server for Enterprise Performance Intelligence™",
+    "private": true,
+    "author": "Hargun Intelligence Compass",
+    "license": "Proprietary",
+    "type": "module",
+    "main": "app.js",
+    "engines": {
+        "node": ">=22.0.0"
+    },
+    "scripts": {
+        "start": "cross-env NODE_ENV=production node server.js",
+        "dev": "cross-env NODE_ENV=development nodemon server.js",
+        "lint": "eslint .",
+        "format": "prettier --write .",
+        "test": "node --test"
+    },
+    "dependencies": {
+        "bcrypt": "^5.1.1",
+        "compression": "^1.8.0",
+        "cookie-parser": "^1.4.7",
+        "cors": "^2.8.5",
+        "dotenv": "^17.2.1",
+        "express": "^5.1.0",
+        "express-rate-limit": "^8.0.1",
+        "helmet": "^8.1.0",
+        "hpp": "^0.2.3",
+        "jsonwebtoken": "^9.0.2",
+        "morgan": "^1.10.0",
+        "multer": "^2.0.2",
+        "pg": "^8.16.3",
+        "prompt-sync": "^4.2.0",
+        "uuid": "^11.1.0",
+        "validator": "^13.15.15"
+    },
+    "devDependencies": {
+        "cross-env": "^10.1.0",
+        "eslint": "^9.34.0",
+        "nodemon": "^3.1.10",
+        "prettier": "^3.6.2"
+    },
+    "keywords": [
+        "enterprise-performance-intelligence",
+        "pharmaceutical",
+        "financial-analysis",
+        "executive-dashboard",
+        "ai",
+        "decision-intelligence"
+    ]
+}
