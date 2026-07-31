@@ -5,8 +5,7 @@ Executive Login Controller
 Version: 1.0
 ==========================================================
 */
-import { AuthService }
-    from "./auth.js";
+
 document.addEventListener("DOMContentLoaded", () => {
 
     // -----------------------------------------------------
@@ -100,20 +99,86 @@ document.addEventListener("DOMContentLoaded", () => {
             ==================================================
             */
 
-            const result = await AuthService.login(
+            const response = await fetch(
 
-                email.value,
+                "http://localhost:3000/api/auth/login",
 
-                password.value
+                {
+
+                    method: "POST",
+
+                    headers: {
+
+                        "Content-Type": "application/json"
+
+                    },
+
+                    body: JSON.stringify({
+
+                        email: email.value.trim(),
+
+                        password: password.value,
+
+                        rememberMe: remember.checked
+
+                    })
+
+                }
 
             );
 
+            const result = await response.json();
+
+            if (!response.ok) {
+
+                throw new Error(
+
+                    result.message ||
+
+                    "Authentication failed."
+
+                );
+
+            }
+
+            /*
+            ----------------------------------------------------------
+            Store Session Token
+            ----------------------------------------------------------
+            */
+
+            sessionStorage.setItem(
+
+                "epi_session_token",
+
+                result.data.token
+
+            );
+
+            /*
+            ----------------------------------------------------------
+            Remember Email
+            ----------------------------------------------------------
+            */
+
             rememberEmail();
+
+            /*
+            ----------------------------------------------------------
+            Status
+            ----------------------------------------------------------
+            */
 
             statusMessage.style.color = "#16A34A";
 
             statusMessage.textContent =
                 "Authentication successful. Redirecting...";
+
+            /*
+            ----------------------------------------------------------
+            Redirect
+            ----------------------------------------------------------
+            */
 
             setTimeout(() => {
 
@@ -295,53 +360,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // -----------------------------------------------------
     // Temporary Authentication
     // -----------------------------------------------------
-
-    async function simulateAuthentication() {
-
-        return new Promise((resolve, reject) => {
-
-            setTimeout(() => {
-
-                /*
-                Replace this block with:
-
-                AuthService.login()
-
-                in auth.js
-
-                */
-
-                if (
-
-                    email.value.trim().toLowerCase() ===
-                    "admin@hargunintelligencecompass.com"
-
-                ) {
-
-                    resolve();
-
-                }
-
-                else {
-
-                    reject(
-
-                        new Error(
-
-                            "Invalid email or password."
-
-                        )
-
-                    );
-
-                }
-
-            }, 1800);
-
-        });
-
-    }
-
 
     // -----------------------------------------------------
     // Enter Key Support
