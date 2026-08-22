@@ -10,6 +10,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 import authRoutes from "./routes/auth.routes.js";
+import analysisRoutes from "./routes/analysis.routes.js";
 
 dotenv.config();
 
@@ -106,6 +107,7 @@ app.get("/api/health", (req, res) => {
 ------------------------------------------------------ */
 
 app.use("/api/auth", authRoutes);
+app.use("/api", analysisRoutes);
 
 /* -----------------------------------------------------
    Default Route
